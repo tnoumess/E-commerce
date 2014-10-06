@@ -1,0 +1,19 @@
+The site will have two main areas:
+
+1. Logged in Area which consists of the following pages
+	a. Account Management
+		Change Password
+		Create/View/Modify Subscription
+	b. Live Feed View
+		View/Manage Live Feeds
+
+2. Marketing and Sales Area
+	a. What We Do
+		Describe the business
+	b. Why Buy From Us (could be multiple pages)
+		Sales Pitch
+	c. Product Page(s)
+		Buy Equipment (Cameras, USB Wireless Boxes)
+		Buy Service Plan
+
+Login/Account Creation and Navigation should be available from all pages
