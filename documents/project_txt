@@ -1,0 +1,53 @@
+Assignment 11: eCommerce Project
+
+General Description:
+
+Identify an eCommerce need for a product or service and implement a working prototype
+using Amazon Web Services. 
+
+Example Project:
+
+	Select a public, web-based data item: weather, stock, social, etc, and build an
+	alert service that sends an update message to subscribers whenever it changes by
+	a selected amount.  For example, if the outdoor temperature reported in Fairfax
+	changes by more than 5 degrees in one hour, send an alert; or if the price of 
+	Google stock increases by more than 2% over the previous day, send an alert.
+	Implement this service using AWS.  Create a business plan describing how to 
+	monetize this service as an eCommerce opportunity.  Who are your customers?
+	Why would they pay for your service?  What extra features might you support?
+	Describe what would happen if millions of subscribers per day started using 
+	your service.
+
+Deliverables:
+
+	1) General Description of your Project Idea and Implementation.
+
+		Not later than November 6, email this to Prof Foxwell
+		for review and approval.  Include the names and roles
+		of your team members.
+
+	2) Working URL for your Web site.
+
+	3) 8 key elements of your Business Model (See LT10, Chapter 2, pages 58-69i).
+
+	4) Your Business Strategy (See LT10, Chapter 2, pages 93-96).
+
+	5) Description of hardware and software resources used (with citations).
+
+	6) Description of technical issues or team issues that needed resolution.
+
+Team Requirements:
+
+	3 to 5 members, including a Project Lead (1), Technical Lead (1 or 2), 
+	and Business Lead (1 or 2).
+
+	Use the Blackboard Discussion Board to collaborate
+
+RESOURCES
+
+	Amazon Web Services (AWS): 
+		http://aws.amazon.com/
+		http://aws.amazon.com/elasticbeanstalk/
+		http://aws.amazon.com/ec2/
+		http://aws.amazon.com/s3/
+		http://aws.amazon.com/sns/
