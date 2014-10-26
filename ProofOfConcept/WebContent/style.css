@@ -1,0 +1,77 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	 a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small,
+	 strong, sub, sup, var, b, i, hr, dl, dt, dd, ol, ul, li, fieldset, form, label,
+	 legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	 details, figure, figcaption, hgroup, menu, footer, header, nav, section, summary,
+	 time, mark, audio, video {
+		margin: 0;
+		padding: 0;	
+}
+
+#outerDiv {
+	width:100%;
+	text-align:center;
+}
+		
+#innerDiv {
+	text-align:left;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+#header {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+#topbar {
+	height: 24px;
+}
+
+#menubar {
+	padding: 0 30%;
+}
+
+#bottombar{
+	text-align:right;
+	border-top: 1px solid #CCCCCC;
+}
+
+.lefthalf {
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+	vertical-align: top;
+}
+
+.righthalf {
+	display: inline-block;
+	width: 50%;
+	text-align: right;
+	vertical-align: top;
+}
+		
+.menuItem {
+	width: 25%;
+	text-align: center;
+	display: inline-block;
+}
+
+.menuItemSelected {
+	background-color: #CCCCCC;
+}
+
+.formLabel {
+	display:inline-block;
+	width: 135px;
+}
+
+.formRow {
+	margin-bottom: 4px;
+}
+
+.error {
+	font-weight: bold;
+	color: red;
+}

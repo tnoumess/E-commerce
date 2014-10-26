@@ -1,0 +1,10 @@
+#Database and ORM settings
+build.db=remoteeye
+build.db.conn=localhost/${build.db}
+build.db.driver=com.mysql.jdbc.Driver
+build.db.url=jdbc:mysql://localhost:3306/${build.db}
+build.db.showsql=false
+build.db.dialect=org.hibernate.dialect.MySQLDialect
+build.db.generateddl=true
+build.db.user=
+build.db.passwd=
