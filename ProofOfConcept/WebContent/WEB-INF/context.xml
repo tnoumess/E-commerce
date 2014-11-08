@@ -18,6 +18,8 @@
 	<bean id="loginController" class="edu.gmu.infs640.proofofconcept.controller.LoginController">
 		<constructor-arg ref="userDAO" />
 	</bean>
+	<!-- <bean id="cartController" class="edu.gmu.infs640.proofofconcept.controller.CartController" scope="session">
+     </bean> -->
 	
 	
 	<!-- Persistence -->

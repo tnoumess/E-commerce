@@ -11,15 +11,27 @@
 	<meta charset="UTF-8">
 	<title>INFS640 Project</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="SCRIPT/jquery.js">  </script>
+	<script>
+	$( document ).ready(function() {
+	$("#checkoutImg").mouseover(function(){
+		if(document.getElementById("good").value=="null")
+			//alert()
+			 $("#link").bind('click',false);
+		
+	});
+	});
+	</script>
 </head>
 
 <body>
 	<div id="outerDiv" style="">
+	
 		<div id="innerDiv">
 			<div id="header">
 				<div id="topbar">
 					<div class="lefthalf">
-						Name and Logo Here Could span two rows
+						<img alt="" src="images/INFS640.gif"  height="50" width="200">
 					</div><div class="righthalf"> <!--  On one line for a reason -->
 						<%
 							Object userName = request.getSession().getAttribute("user");
@@ -32,17 +44,19 @@
 								showSignOut = true;
 							}
 						%>
-						<img src="images/cart.png" style="vertical-align:top"/>
+				<a href="cart.jsp" id="link"> <img src="images/cart.png" style="vertical-align:top" id="checkoutImg"/>   </a>
 						<%
 							if(showSignOut){
 								out.print("<a href=\"logout\">Sign Out</a>");
 							}
 						%>
 					</div>
-				</div>
+				</div><br>
 				<div id="menubar">
 					<!-- Yes, these are all on one line for a reason -->
 					<!--  TODO add jsp logic to determine which is selected -->
-					<div class="menuItem menuItemSelected">Why</div><div class="menuItem">Products</div><div class="menuItem">Get Started</div><div class="menuItem">Download</div>
+					<div class="menuItem menuItemSelected">Why</div><div class="menuItem"><a href="Products.jsp">Products</a></div><div class="menuItem">Get Started</div><div class="menuItem">Download</div>
 				</div>
 			</div>
+			<% Object val=request.getSession().getAttribute("cart");%>
+<input type="text" id="good" value="<% out.print(val);%>">

@@ -33,6 +33,10 @@
 		<servlet-name>mvc</servlet-name>
 		<url-pattern>/logout</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>mvc</servlet-name>
+		<url-pattern>/addtocart</url-pattern>
+	</servlet-mapping>
     
 	<!-- Welcome File List -->
   	<welcome-file-list>
