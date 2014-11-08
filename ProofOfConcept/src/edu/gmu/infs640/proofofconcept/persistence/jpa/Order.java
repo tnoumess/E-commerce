@@ -14,7 +14,7 @@ public class Order {
 	@Column(name="orderId", nullable=false,unique=true)
 	private String orderId;
 	@Column(nullable=false)
-	private String userId;// foreign key
+	private String userId;// the foreign key
 	@Column(nullable=false)
 	private double price;//sum of all the articles ordered
 	
