@@ -36,6 +36,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 #bottombar{
 	text-align:right;
 	border-top: 1px solid #CCCCCC;
+	clear:both;
 }
 
 .lefthalf {
@@ -123,5 +124,25 @@ div.leftMenu a{
 
 /*Body for User Related Content*/
 .userContent{
-	float: left;
+	margin-left: 220px;
+}
+
+#mainVideoPanel{
+	width: 100%;
+	text-align: center;
+}
+#mainVideo{
+	width: 95%;
+}
+
+#videoPreviewPanel{
+	clear:both;	
+	overflow: auto;
+	white-space: nowrap;
+}
+
+.videoPreview{
+	width: 80px;
+	height:60px;
+	float:left;
 }
