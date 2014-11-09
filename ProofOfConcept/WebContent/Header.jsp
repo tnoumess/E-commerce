@@ -4,7 +4,9 @@
 	*
 	*	Header include page for .jsp's
 	*/
+	
 %>
+
 <!doctype html>
 <html>
 <head>
@@ -26,7 +28,6 @@
 
 <body>
 	<div id="outerDiv" style="">
-	
 		<div id="innerDiv">
 			<div id="header">
 				<div id="topbar">
@@ -40,7 +41,7 @@
 								out.print("<a href=\"Login.jsp\">Sign In</a>");
 							}
 							else {
-								out.print(userName.toString());
+								out.print("<a href=\"UserHome.jsp\">" + userName.toString()+"</a>");
 								showSignOut = true;
 							}
 						%>
@@ -55,7 +56,7 @@
 				<div id="menubar">
 					<!-- Yes, these are all on one line for a reason -->
 					<!--  TODO add jsp logic to determine which is selected -->
-					<div class="menuItem menuItemSelected">Why</div><div class="menuItem"><a href="Products.jsp">Products</a></div><div class="menuItem">Get Started</div><div class="menuItem">Download</div>
+					<div class="menuItem <%= request.getServletPath().substring(1).compareTo("Welcome.jsp") == 0 ? "menuItemSelected" : "" %>"><a href="Welcome.jsp">Why</a></div><div class="menuItem <%= request.getServletPath().substring(1).compareTo("Products.jsp") == 0 ? "menuItemSelected" : "" %>"><a href="Products.jsp">Products</a></div><div class="menuItem">Get Started</div><div class="menuItem">Download</div>
 				</div>
 			</div>
 			<% Object val=request.getSession().getAttribute("cart");%>

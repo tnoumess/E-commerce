@@ -61,7 +61,10 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 .menuItemSelected {
 	background-color: #CCCCCC;
 }
-
+.menuItemSelected a {
+   pointer-events: none;
+   cursor: default;
+}
 .formLabel {
 	display:inline-block;
 	width: 135px;
@@ -74,4 +77,51 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 .error {
 	font-weight: bold;
 	color: red;
+}
+
+/*UserHome.jsp*/
+.leftMenu{
+	float: left;
+    width: 200px;
+    /*height: 90px;*/
+    margin-left: 5px;
+    margin-top: 20px;
+    /*border*/
+	border-style:double;
+	border-width: 5px;
+	border-color: #00FFFF;
+}
+
+/*UserLeftMenu.jsp*/
+div.leftMenu div{
+	background-color: #FFFF66;
+	font-size: 24px;
+	color: #0066FF;
+	
+		
+	/*border
+	border-bottom-style:double;
+	border-width: 5px;
+	border-color: #00FFFF;
+	*/
+	padding:2px;
+}
+div.leftMenu div:hover,
+div.leftMenu a:hover{
+	color: #0000FF;
+	cursor: pointer;
+	background-color: #FFFF00;
+}
+
+div.leftMenu a{
+	text-decoration: none;
+}
+
+.leftMenu .leftMenuSelected{
+	background-color: #CCCCCC;
+}
+
+/*Body for User Related Content*/
+.userContent{
+	float: left;
 }

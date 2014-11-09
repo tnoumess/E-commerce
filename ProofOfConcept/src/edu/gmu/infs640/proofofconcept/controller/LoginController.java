@@ -74,7 +74,7 @@ public class LoginController {
 			try {
 				if(userDao.validateLogin(userName, password)){
 					request.getSession().setAttribute("user", userName);
-					response.sendRedirect("Welcome.jsp");
+					response.sendRedirect("UserHome.jsp");
 				}
 				else {
 					response.sendRedirect("Login.jsp?errorMsg=Invalid%20user%20name%20or%20password.");
