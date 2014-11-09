@@ -57,7 +57,7 @@
 				<div id="menubar">
 					<!-- Yes, these are all on one line for a reason -->
 					<!--  TODO add jsp logic to determine which is selected -->
-					<div class="menuItem <%= request.getServletPath().substring(1).compareTo("Welcome.jsp") == 0 ? "menuItemSelected" : "" %>"><a href="Welcome.jsp">Why</a></div><div class="menuItem <%= request.getServletPath().substring(1).compareTo("Products.jsp") == 0 ? "menuItemSelected" : "" %>"><a href="Products.jsp">Products</a></div><div class="menuItem">Get Started</div><div class="menuItem">Download</div>
+					<div class="menuItem <%= request.getServletPath().substring(1).compareTo("Welcome.jsp") == 0 ? "menuItemSelected" : "" %>"><a href="Welcome.jsp">Why</a></div><div class="menuItem <%= request.getServletPath().substring(1).compareTo("Products.jsp") == 0 ? "menuItemSelected" : "" %>"><a href="product">Products</a></div><div class="menuItem">Get Started</div><div class="menuItem">Download</div>
 				</div>
 			</div>
 			<% Object val=request.getSession().getAttribute("cart");%>

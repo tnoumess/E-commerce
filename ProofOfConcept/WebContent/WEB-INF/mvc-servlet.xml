@@ -5,10 +5,21 @@
       http://www.springframework.org/schema/beans
       http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
       
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+<!--         <property name="prefix" value="/WEB-INF/jsp/"></property> -->
+        <property name="suffix" value=".jsp"></property>        
+    </bean>      
+      
 	<!-- Controller Beans -->
 	<bean id="loginController" class="edu.gmu.infs640.proofofconcept.controller.LoginController">
-	<constructor-arg ref="userDAO" />
+		<constructor-arg ref="userDAO" />
 	</bean>
+	
+	<bean id="productController" class="edu.gmu.infs640.proofofconcept.controller.ProductController">
+		<constructor-arg ref="productDAO" />
+	</bean>
+	
 	<bean id="cartController" class="edu.gmu.infs640.proofofconcept.controller.CartController" scope="session">
-     </bean>
+    </bean>
 </beans>

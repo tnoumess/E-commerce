@@ -14,16 +14,41 @@
 	<context:property-placeholder ignore-resource-not-found="false" location="classpath:remoteEye.properties" />
 	<context:annotation-config/>
 	
-	<!-- Controller Beans -->
-	<bean id="loginController" class="edu.gmu.infs640.proofofconcept.controller.LoginController">
-		<constructor-arg ref="userDAO" />
-	</bean>
 	<!-- <bean id="cartController" class="edu.gmu.infs640.proofofconcept.controller.CartController" scope="session">
      </bean> -->
 	
+	<bean id="productInjector" class="edu.gmu.infs640.proofofconcept.persistence.ProductInjector">
+		<constructor-arg ref="productDAO" />
+		<constructor-arg>
+			<list>
+				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
+					<constructor-arg value="Camera1"/>		
+					<constructor-arg value="Cool Kid Camera"/>
+					<constructor-arg value="images/Nokia.jpg"/>
+					<constructor-arg value="This cool kid camera is the most awesome camera ever, for rizzle!"/>
+					<constructor-arg value="1234.56"/>
+				</bean>
+				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
+					<constructor-arg value="Camera2"/>		
+					<constructor-arg value="Low End Camera"/>
+					<constructor-arg value="images/Nokia.jpg"/>
+					<constructor-arg value="This low end camera kinda does basic stuff and stuff"/>
+					<constructor-arg value="123.45"/>
+				</bean>				
+				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
+					<constructor-arg value="USBBox1"/>		
+					<constructor-arg value="USB Wireless Box Thingy"/>
+					<constructor-arg value="images/Nokia.jpg"/>
+					<constructor-arg value="Plug in your existing web cam to this thing and it wirelessly transmit to your router"/>
+					<constructor-arg value="49.99"/>
+				</bean>				
+			</list>
+		</constructor-arg>
+	</bean>
 	
 	<!-- Persistence -->
 	<bean id="userDAO" class="edu.gmu.infs640.proofofconcept.persistence.UserDaoImpl"/>
+	<bean id="productDAO" class="edu.gmu.infs640.proofofconcept.persistence.ProductDaoImpl"/>
 	
 	<bean id="myEmf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
