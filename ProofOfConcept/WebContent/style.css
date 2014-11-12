@@ -88,9 +88,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
     margin-left: 5px;
     margin-top: 20px;
     /*border*/
-	border-style:double;
-	border-width: 5px;
-	border-color: #00FFFF;
+	border: 5px double #00FFFF;
 }
 
 /*UserLeftMenu.jsp*/
@@ -111,11 +109,12 @@ div.leftMenu div:hover,
 div.leftMenu a:hover{
 	color: #0000FF;
 	cursor: pointer;
-	background-color: #FFFF00;
+	background-color: #FF9900;
 }
 
 div.leftMenu a{
 	text-decoration: none;
+	display: block;
 }
 
 .leftMenu .leftMenuSelected{
@@ -127,12 +126,59 @@ div.leftMenu a{
 	margin-left: 220px;
 }
 
+/*Home*/
+.contentItem{
+	float: left;
+	margin: 15px;
+	padding: 5px;
+	
+	/*border*/
+	border: 1px solid #ADAD99;
+}
+.userContentTitle{
+	font-size: 25px;
+	color: #00CCFF;
+	
+	border-bottom-style: dotted;
+	border-color: #ADAD99;
+}
+.userContentData{
+	margin-left: 5px;
+	margin-top: 3px;
+	cursor: pointer;
+}
+.add{
+	padding-left: 5px;
+	padding-top: 3px;
+	cursor: pointer;
+	background-color: #DFDFDD;
+}
+
+
+/*My Video's page*/
 #mainVideoPanel{
 	width: 100%;
 	text-align: center;
 }
 #mainVideo{
 	width: 95%;
+}
+#shareVideo{
+	clear:both;
+	float: right;
+	margin: 5px;
+
+	/*circular border*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ADAD99;
+	padding: 3px;
+	
+	cursor: pointer;
+}
+#shareVideo:hover{
+	background-color: #ADAD99;
 }
 
 #videoPreviewPanel{

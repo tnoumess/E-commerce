@@ -14,6 +14,7 @@
 		Your browser does not support the video tag.
 		</video>
 	</div> 
+	<div id="shareVideo">Share &#x25BC;</div>
 	<div id="videoPreviewPanel">
 		<img src="images/playImage.jpg" />
 		<img src="images/playImage.jpg" />
