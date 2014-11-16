@@ -14,6 +14,7 @@
 {
 	margin-top: 27px;
 	margin-bottom: 1px;
+	width: 100%;
 }
 
 #pu69
@@ -50,7 +51,7 @@
 {
 	z-index: 34;
 	width: 0.01px;
-	height: 379px;
+	/*height: 379px;*/
 	margin-right: -10000px;
 	margin-top: 14px;
 }
@@ -132,7 +133,7 @@
 	height: 26px;
 	margin-bottom: -1px;
 	margin-right: -10000px;
-	margin-top: 352px;
+	/*margin-top: 352px;*/
 	left: -1px;
 }
 
@@ -217,7 +218,7 @@
 {
 	z-index: 78;
 	width: 0.01px;
-	height: 382px;
+	/*height: 382px;*/
 	margin-right: -10000px;
 	margin-top: 16px;
 }
@@ -226,7 +227,7 @@
 {
 	z-index: 79;
 	width: 146px;
-	height: 26px;
+	/*height: 26px;*/
 	margin-right: -10000px;
 	margin-top: 3px;
 	left: 99px;
@@ -287,10 +288,10 @@
 {
 	z-index: 84;
 	width: 340px;
-	height: 26px;
+	/*height: 26px;*/
 	margin-bottom: -1px;
 	margin-right: -10000px;
-	margin-top: 355px;
+	/*margin-top: 355px;*/
 	left: -1px;
 }
 
@@ -417,7 +418,7 @@
 {
 	z-index: 4;
 	width: 735px;
-	top: -331px;
+	/*top: -331px;*/
 	margin-bottom: -52px;
 }
 
@@ -541,7 +542,7 @@
 {
 	width: 0.01px;
 	margin-left: 84px;
-	top: -262px;
+	/*top: -262px;*/
 	margin-bottom: -262px;
 	position: relative;
 }
@@ -765,7 +766,7 @@
 {
 	z-index: 33;
 	width: 1070px;
-	height: 81px;
+	/*height: 81px;*/
 	margin-right: -10000px;
 }
 
