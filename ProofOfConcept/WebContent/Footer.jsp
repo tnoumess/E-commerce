@@ -5,7 +5,7 @@
 	*	Footer include page for .jsp's
 	*/
 %>
-			<div id="bottombar">&copy; 2014 - Proof Of Concept</div>
+			<div id="bottombar">2014&copy; RemoteEye</div>
 		</div>
 	</div>
 
