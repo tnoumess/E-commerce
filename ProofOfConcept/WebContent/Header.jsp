@@ -45,6 +45,7 @@ var __adobewebfontsappname__ = "muse";
 </head>
 
 <body>
+<<<<<<< HEAD
 
 <div class="clearfix" id="page"><!-- column -->
    <div class="position_content" id="page_position_content">
@@ -142,3 +143,33 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 } catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
 </script>
 	
+=======
+	<div id="outerDiv" style="">
+		<div id="innerDiv">
+			<div id="topbar">
+				<img alt="RemoteEye Logo" src="images/logo.gif" id="logo">
+				<div class="rightmenu"> <!--  On one line for a reason -->
+					<%
+						Object userName = request.getSession().getAttribute("user");
+						boolean showSignOut = false;
+						if(userName == null){
+							out.print("<a href=\"Login.jsp\">Sign In</a>");
+						}
+						else {
+							out.print("<a href=\"UserHome.jsp\">" + userName.toString()+"</a>");
+							showSignOut = true;
+						}
+					%>
+					<a href="cart.jsp" id="link"> <img src="images/cart.png" style="vertical-align:top" id="checkoutImg"/>   </a>
+					<%
+						if(showSignOut){
+							out.print("<a href=\"logout\">Sign Out</a>");
+						}
+					%>
+				</div>
+				<!-- Yes, these are all on one line for a reason -->
+				<!--  TODO add jsp logic to determine which is selected -->
+				<div class="menuItem <%= request.getServletPath().substring(1).compareTo("Welcome.jsp") == 0 ? "menuItemSelected" : "" %>"><a href="Welcome.jsp">Welcome</a></div><div class="menuItem <%= request.getServletPath().substring(1).compareTo("Products.jsp") == 0 ? "menuItemSelected" : "" %>"><a href="product">Products</a></div><div class="menuItem">Get Started</div><div class="menuItem">Download</div>
+			</div>
+			<% Object val=request.getSession().getAttribute("cart");%>
+>>>>>>> branch 'master' of https://lilysanw@bitbucket.org/phamquang/e-commerce.git
