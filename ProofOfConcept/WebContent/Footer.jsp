@@ -5,6 +5,7 @@
 	*	Footer include page for .jsp's
 	*/
 %>
+</div> <!-- end of "pageContent" -->
 	<div class="verticalspacer"></div>
     <div class="clearfix colelem" id="pu177-4"><!-- group -->
      <div class="clearfix grpelem" id="u177-4"><!-- content -->

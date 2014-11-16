@@ -289,7 +289,7 @@ span.actAsInlineDiv /* used to simulate a DIV with inline display when already n
 	overflow: hidden;
 	left: -9999px;
 	top: -9999px;
-	height: 1px;
+	/*height: 1px;*/
 	width: 1px;
 }
 
@@ -419,3 +419,6 @@ textarea
 	width: 0px;
 }
 
+#pageContent{
+	clear: both;
+}

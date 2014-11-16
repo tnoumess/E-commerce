@@ -7,7 +7,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ include file="Header.jsp" %> 
 
-<<<<<<< HEAD
 <div id="fb-root"></div>
 <script>
 (function(d, s, id) {
