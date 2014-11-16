@@ -17,7 +17,9 @@
     		<div><c:out value="${prod.description}"/></div>
     	</div>
     </c:forEach>
+    
+    <%@ include file="Footer.jsp" %> 
 
-<%@ include file="Footer.jsp" %> 
+ 
 
 

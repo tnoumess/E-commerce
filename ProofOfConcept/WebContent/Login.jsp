@@ -7,7 +7,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ include file="Header.jsp" %> 
 
-<div style="height: 500px; margin: 20px;">
+<div style="height: 500px; margin: 200px; position: absolute;">
 	<form action="login" method="post">
 			<div style="margin:0 auto;max-width:300px">
 			<h2>Sign In</h2>
