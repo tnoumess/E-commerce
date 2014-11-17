@@ -1,8 +1,75 @@
 .ui-accordion {
-	width:75%;
+	width:90%;
 	margin:auto;
 }
 
 #pageContent{
 	text-align: center;
+}
+
+/*all accordion items*/
+#subscriptionPlans div {
+	text-align: left;
+}
+
+/*accordion list item*/
+#subscriptionPlans div ul{
+	margin-left: 40px;
+	
+	/*accommodate for subscribe button*/
+	margin-bottom: 24px;
+}
+
+#subscriptionPlans div b{
+	font-size: 110%;
+	font-weight: bold;
+}
+
+.ui-accordion-content{
+	background-color: #FBFBFB;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+/*Button - Add To Cart*/
+#subscriptionPlans div .subscribeToCart{
+	width: 100%;
+	padding: 7px 0px;
+	text-align: center;
+	/*background-color: #7E7E7E;*/
+	background-color: #0071bc;
+	
+	/*float to bottom*/
+	position: absolute;
+	bottom:0;
+	left:0;
+	
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; /* Webkit */
+	-moz-user-select: none;    /* Firefox */
+	-ms-user-select: none;     /* IE 10  */
+	
+	/* Currently not supported in Opera but will be soon */
+	-o-user-select: none;
+	user-select: none; 
+	
+	/*button effect*/
+	background: #65a9d7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+	background: -o-linear-gradient(top, #3e779d, #65a9d7);
+}
+
+#subscriptionPlans div .subscribeToCart:hover{
+	color: white;
+	border-top-color: #056aa8;
+	background: #056aa8;
+}
+
+#subscriptionPlans div .subscribeToCart:active{
+ border-top-color: #0071bc;
+   background: #0071bc;
 }

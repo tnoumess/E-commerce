@@ -16,10 +16,19 @@
   <meta name="generator" content="7.3.5.244"/>
   <title>RemoteEye</title>
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="CSS/site_global.css?3983832653"/>
-  <link rel="stylesheet" type="text/css" href="CSS/master_a-master.css?479216616"/>
-  <link rel="stylesheet" type="text/css" href="CSS/home.css?424587427" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="CSS/site_global.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/master_a-master.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/home.css" id="pagesheet"/>
   <link rel="stylesheet" type="text/css" href="style.css">
+  
+    <!-- jQuery Include -->
+  	<script type="text/javascript">
+	   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+	</script>
+ 	<script type="text/javascript">
+	   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+	</script>
+  
 	<script>
 	$( document ).ready(function() {
 	$("#u509_img").mouseover(function(){
@@ -30,8 +39,12 @@
 	});
 	});
 	</script>
+	<script src="SCRIPT/jquery-ui.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="CSS/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="CSS/getStarted.css" />
   <!--[if lt IE 9]>
-  <link rel="stylesheet" type="text/css" href="css/iefonts_home.css?4103989859"/>
+  <link rel="stylesheet" type="text/css" href="css/iefonts_home.css"/>
   <![endif]-->
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -89,7 +102,7 @@ var __adobewebfontsappname__ = "muse";
         <div class="MenuItemLabel NoWrap clearfix grpelem" id="u94-4"><!-- content --><p>Welcome</p></div></a>
        </li>
        <li class="MenuItemContainer clearfix grpelem" id="u121"><!-- vertical box -->
-        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u122" href="get-started.html"><!-- horizontal box -->
+        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u122" href="GetStarted.jsp"><!-- horizontal box -->
         <div class="MenuItemLabel NoWrap clearfix grpelem" id="u125-4"><!-- content --><p>Get Started</p></div></a>
        </li>
        <li class="MenuItemContainer clearfix grpelem" id="u134"><!-- vertical box -->
@@ -116,18 +129,12 @@ var __adobewebfontsappname__ = "muse";
    <img class="preload" src="images/u485-17-fs.png" alt=""/>
   </div>
  
-  <!-- JS includes -->
-  <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script src="SCRIPTS/museutils.js?3880880085" type="text/javascript"></script>
-  <script src="SCRIPTS/webpro.js?33264525" type="text/javascript"></script>
-  <script src="SCRIPTS/jquery.musemenu.js?32367222" type="text/javascript"></script>
-  <script src="SCRIPTS/jquery.watch.js?4199601726" type="text/javascript"></script>
-  <script src="SCRIPT/jquery.js">  </script>
+
+  <script src="SCRIPT/museutils.js" type="text/javascript"></script>
+  <script src="SCRIPT/webpro.js" type="text/javascript"></script>
+  <script src="SCRIPT/jquery.musemenu.js" type="text/javascript"></script>
+  <script src="SCRIPT/jquery.watch.js" type="text/javascript"></script>
+  
   <!-- Other scripts -->
   <script type="text/javascript">
    $(document).ready(function() { try {
@@ -141,5 +148,7 @@ Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 } catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
 </script>
+
+	<div id="pageContent">
 	
 	

@@ -44,7 +44,7 @@ del,ins
 
 li
 {
-	list-style: none;
+	/*list-style: none;*/
 }
 
 caption,th
