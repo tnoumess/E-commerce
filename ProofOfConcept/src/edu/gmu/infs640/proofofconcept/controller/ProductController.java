@@ -127,7 +127,7 @@ public class ProductController{
 		System.out.println("keys"+values);
 		Iterator<?> iter=values.iterator();
 		while(iter.hasNext()){
-			//System.out.println("val"+iter.next());
+			
 			String id=(String) iter.next();
 			dao.getProductById(id).getName();
 			sum=sum.add(dao.getProductById(id).getPrice());
