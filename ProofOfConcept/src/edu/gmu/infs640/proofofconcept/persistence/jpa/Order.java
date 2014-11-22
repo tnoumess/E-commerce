@@ -6,25 +6,32 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
 	
 	
 	@Id
 	@Column(name="orderId", nullable=false,unique=true)
-	private String orderId;
+	private int orderId;
 	@Column(nullable=false)
 	private String userId;// the foreign key
 	@Column(nullable=false)
 	private double price;//sum of all the articles ordered
 	
-	private Order(){}
+	
 
-	public String getOrderId() {
+	public Order(int orderId, String userId, double price) {
+		super();
+		this.orderId = orderId;
+		this.userId = userId;
+		this.price = price;
+	}
+
+	public int getOrderId() {
 		return orderId;
 	}
 
-	public void setOrderId(String orderId) {
+	public void setOrderId(int orderId) {
 		this.orderId = orderId;
 	}
 

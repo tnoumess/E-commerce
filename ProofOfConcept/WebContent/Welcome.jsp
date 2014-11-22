@@ -22,6 +22,7 @@
      <div class="clearfix grpelem" id="ppu391"><!-- column -->
       <div class="clearfix colelem" id="pu391"><!-- group -->
        <div class="clip_frame grpelem" id="u391"><!-- image -->
+        
         <img class="block" id="u391_img" src="images/blue-house-md.png" alt="" width="30" height="32"/>
        </div>
        <div class="clearfix grpelem" id="u393-4"><!-- content -->
@@ -57,6 +58,17 @@
       </div>
      </div>
      <div class="rounded-corners clip_frame grpelem" id="u389"><!-- image -->
+     <% 
+   Object sms=request.getSession().getAttribute("sms");
+  
+      if(sms!=null&&sms.equals("sms")){
+    	out.print("<span style='color:green'>Thank you for Shopping. Your order has been placed</span>");  
+    	  session.invalidate();
+      }
+        
+      
+      
+      %>
       <img class="block" id="u389_img" src="images/happy%20family-2.jpg" alt="" width="680" height="434"/>
      </div>
     </div>

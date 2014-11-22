@@ -64,8 +64,14 @@ var __adobewebfontsappname__ = "muse";
      <div class="clearfix colelem" id="pu69"><!-- group -->
      <div class="clip_frame grpelem" id="u69"><!-- image -->
       <a href="Welcome.jsp"><img class="block" id="u69_img" src="images/INFS640.gif" alt="" width="248" height="104"/></a>
-      <% Object val=request.getSession().getAttribute("cart");%><input type="text" id="good" value="<% out.print(val);%>">
-     </div>
+      <% Object val=request.getSession().getAttribute("cart");
+        
+      %>
+      
+      <input type="hidden" id="good" value="<% out.print(val);%>">
+      <% //out.print(val);%>
+     
+           </div>
      <div class="clearfix grpelem" id="ppwidgetu450"><!-- column -->
       <div class="clearfix colelem" id="pwidgetu450"><!-- group -->
        
@@ -93,7 +99,7 @@ var __adobewebfontsappname__ = "muse";
       <!-- state-based BG images -->
      </form>    
      <div class="clip_frame grpelem" id="u509"><!-- image -->
-        <a href="cart.jsp" id="link"><img class="block" id="u509_img" src="images/cartimg.png" alt="" width="47" height="47"/></a>
+        <a href="listcart" id="link"><img class="block" id="u509_img" src="images/cartimg.png" alt="shopping cart img" width="47" height="47"/></a>
        </div>
       </div>
       <ul class="MenuBar clearfix colelem" id="menuu75"><!-- horizontal box -->
