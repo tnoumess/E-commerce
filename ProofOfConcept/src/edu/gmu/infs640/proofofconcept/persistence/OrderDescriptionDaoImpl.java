@@ -24,7 +24,7 @@ public class OrderDescriptionDaoImpl implements OrderDescriptionDao {
  
 	@Override
 	public boolean createNewdescription(int orderId, String productId,
-			int quantity, double total) {System.out.println("in odd");
+			int quantity, double total) {
 		OrderDescription Od= new OrderDescription( orderId, productId, quantity,total);
 		em.persist(Od);
 		// TODO Auto-generated method stub

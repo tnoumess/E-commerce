@@ -49,7 +49,6 @@ public class ProductController{
 		@SuppressWarnings("unchecked")
 		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
 		Set<?> values=cart.keySet();
-		System.out.println("keys"+values);
 		Iterator<?> iter=values.iterator();
 		while(iter.hasNext()){
 			//System.out.println("val"+iter.next());
@@ -117,23 +116,18 @@ public class ProductController{
 		BigDecimal sum= new BigDecimal(0);
 		HttpSession session=request.getSession();
 		int orderId=(request.getParameter("name")+new Date()).hashCode();
-		System.out.println(request.getParameter("name")+new Date());
 		if(session.getAttribute("cart")!=null){
 		@SuppressWarnings("unchecked")
 		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
 		
 		
 		Set<?> values=cart.keySet();
-		System.out.println("keys"+values);
 		Iterator<?> iter=values.iterator();
 		while(iter.hasNext()){
 			
 			String id=(String) iter.next();
 			dao.getProductById(id).getName();
 			sum=sum.add(dao.getProductById(id).getPrice());
-			System.out.println("orderId="+orderId);
-			System.out.println("user="+request.getParameter("name"));
-			System.out.println("sum="+sum);
 			//double price=dao.getProductById(id).getPrice();
 		                        Od.createNewdescription(orderId,id, 1, dao.getProductById(id).getPrice().doubleValue());
 		}

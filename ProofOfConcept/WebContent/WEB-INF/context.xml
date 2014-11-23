@@ -42,28 +42,6 @@
 					<constructor-arg value="High-end and HD perfect for RemoteEye® services. With the Samsung Full HD Wifi IP Camera, your video will be streamed wirelessly to your computer and worry free choosing where to place it! This camera also features a microphone so that your streams would have voice!"/>
 					<constructor-arg value="189.99"/>
 				</bean>		
-				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
-					<constructor-arg value="y_free"/>		
-					<constructor-arg value="FREE TRIAL"/>
-					<constructor-arg value=""/>
-					<constructor-arg value="Access to two tiers ViewNow and StoreNView capabilities as listed below.Free trial will end after 7 days, after which you can choose between two tiers."/>
-					<constructor-arg value="0.00"/>
-				</bean>	
-				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
-					<constructor-arg value="y_medium"/>		
-					<constructor-arg value="SATURN"/>
-					<constructor-arg value=""/>
-					<constructor-arg value="Click and stream from any computer to view from your selected camera."/>
-					<constructor-arg value="9.99"/>
-				</bean>	
-				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
-					<constructor-arg value="y_exelence"/>		
-					<constructor-arg value="JUPITER"/>
-					<constructor-arg value=""/>
-					<constructor-arg value="Unlimited access to recorded media any time within 30 days."/>
-					<constructor-arg value="44.99"/>
-				</bean>
-							
 			</list>
 		</constructor-arg>
 	</bean>
