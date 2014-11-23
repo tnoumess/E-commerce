@@ -583,6 +583,7 @@
 	margin-right: -10000px;
 	margin-top: 10px;
 	left: 29px;
+	text-align:left;
 }
 
 #u394-5
@@ -593,6 +594,7 @@
 	font-size: 14px;
 	margin-left: 4px;
 	position: relative;
+	text-align:left;
 }
 
 #pu395
@@ -636,6 +638,7 @@
 	margin-right: -10000px;
 	margin-top: 10px;
 	left: 37px;
+	text-align:left;
 }
 
 #u398-4
@@ -643,10 +646,12 @@
 	z-index: 139;
 	width: 226px;
 	min-height: 50px;
+	font-size: 14px;
 	font-family: Verdana, Tahoma, Geneva, sans-serif;
 	margin-left: 2px;
 	margin-top: 3px;
 	position: relative;
+	text-align:left;
 }
 
 #pu399
@@ -677,15 +682,18 @@
 	margin-right: -10000px;
 	margin-top: 14px;
 	left: 37px;
+	text-align:left;
 }
 
 #u402-5
 {
 	z-index: 149;
 	width: 226px;
+	font-size: 14px;
 	min-height: 50px;
 	margin-left: 2px;
 	position: relative;
+	text-align:left;
 }
 
 #u394,#u402

@@ -450,11 +450,17 @@
 	position: relative;
 }
 
-#u91:hover
-{
+
+#menuu75 li a:hover{
 	background-color: #999999;
 	background-color: rgba(153, 153, 153, 1);
-	-pie-background: rgba(153, 153, 153, 1);
+	-pie-background: rgba(153, 153, 153, 1);	
+}
+
+#menuu75 li.active a{
+	background-color: #999999;
+	background-color: rgba(153, 153, 153, 1);
+	-pie-background: rgba(153, 153, 153, 1);	
 }
 
 #u91:active
@@ -481,12 +487,7 @@
 	position: relative;
 }
 
-#u122:hover
-{
-	background-color: #999999;
-	background-color: rgba(153, 153, 153, 1);
-	-pie-background: rgba(153, 153, 153, 1);
-}
+
 
 #u122:active
 {
@@ -512,12 +513,6 @@
 	position: relative;
 }
 
-#u137:hover
-{
-	background-color: #999999;
-	background-color: rgba(153, 153, 153, 1);
-	-pie-background: rgba(153, 153, 153, 1);
-}
 
 #u137:active
 {
@@ -546,13 +541,6 @@
 	-khtml-border-radius: 8px;
 	border-radius: 8px;
 	position: relative;
-}
-
-#u150:hover
-{
-	background-color: #999999;
-	background-color: rgba(153, 153, 153, 1);
-	-pie-background: rgba(153, 153, 153, 1);
 }
 
 #u150:active

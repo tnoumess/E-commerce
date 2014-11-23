@@ -29,16 +29,6 @@
 	   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
 	</script>
   
-	<script>
-	$( document ).ready(function() {
-	$("#u509_img").mouseover(function(){
-		if(document.getElementById("good").value=="null")
-			//alert()
-			 $("#link").bind('click',false);
-		
-	});
-	});
-	</script>
 	<script src="SCRIPT/jquery-ui.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="CSS/jquery-ui.css" />
@@ -64,7 +54,6 @@ var __adobewebfontsappname__ = "muse";
      <div class="clearfix colelem" id="pu69"><!-- group -->
      <div class="clip_frame grpelem" id="u69"><!-- image -->
       <a href="Welcome.jsp"><img class="block" id="u69_img" src="images/INFS640.gif" alt="" width="248" height="104"/></a>
-      <% Object val=request.getSession().getAttribute("cart");%><input type="text" id="good" value="<% out.print(val);%>">
      </div>
      <div class="clearfix grpelem" id="ppwidgetu450"><!-- column -->
       <div class="clearfix colelem" id="pwidgetu450"><!-- group -->
@@ -110,8 +99,8 @@ var __adobewebfontsappname__ = "muse";
         <div class="MenuItemLabel NoWrap clearfix grpelem" id="u139-4"><!-- content --><p>Products</p></div></a>
        </li>
        <li class="MenuItemContainer clearfix grpelem" id="u147"><!-- vertical box -->
-        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u150" href="demo.html"><!-- horizontal box -->
-        <div class="MenuItemLabel NoWrap clearfix grpelem" id="u153-4"><!-- content --><p>Demo</p></div></a>
+        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u150" href="download.html"><!-- horizontal box -->
+        <div class="MenuItemLabel NoWrap clearfix grpelem" id="u153-4"><!-- content --><p>Download</p></div></a>
        </li>
       </ul>
    </div>
@@ -149,6 +138,18 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 } catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
 </script>
 
-	<div id="pageContent">
+<!-- Highlights navigation for current page -->
+<script type="text/javascript">
+	$(function(){
+		var url = window.location.href;
+		$("#menuu75 a").each(function(){
+			if(url==(this.href)){
+				$(this).closest("li").addClass("active");
+			}	
+		})
+	})
+
+</script>
+<div id="pageContent">
 	
 	

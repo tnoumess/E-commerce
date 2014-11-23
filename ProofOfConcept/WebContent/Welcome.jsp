@@ -17,10 +17,10 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
-
-<div class="clearfix colelem" id="pppu391"><!-- group -->
-     <div class="clearfix grpelem" id="ppu391"><!-- column -->
-      <div class="clearfix colelem" id="pu391"><!-- group -->
+<div id="tagline">The Only Integrated Home Monitoring system where You Choose Your Own Camera</div>
+	<div class="clearfix colelem" id="pppu391"><!-- group -->
+	<div class="clearfix grpelem" id="ppu391"><!-- column -->     
+      <div class="clearfix colelem" id="pu391"><!-- group -->      
        <div class="clip_frame grpelem" id="u391"><!-- image -->
         <img class="block" id="u391_img" src="images/blue-house-md.png" alt="" width="30" height="32"/>
        </div>
