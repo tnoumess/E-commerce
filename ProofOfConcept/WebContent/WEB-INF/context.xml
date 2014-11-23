@@ -26,7 +26,7 @@
 					<constructor-arg value="Cool Kid Camera"/>
 					<constructor-arg value="images/Nokia.jpg"/>
 					<constructor-arg value="This cool kid camera is the most awesome camera ever, for rizzle!"/>
-					<constructor-arg value="1234.56"/>
+					<constructor-arg value="123.56"/>
 				</bean>
 				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
 					<constructor-arg value="Camera2"/>		
