@@ -16,8 +16,14 @@
 			<li>Access to two tiers ViewNow and StoreNView capabilities as listed below.</li>
 			<li>Free trial will end after 7 days, after which you can choose between two tiers.</li>
 		</ul>
-		<div class="subscribeToCart" id="subTrial">Add To Cart!</div>
-	</div>
+		<div class="subscribeToCart" id="subTrial">
+		<form action="addtocart" method="post">
+     			<input type="hidden"name=productId value="<c:out value="y_free"/>">
+     			<input type="submit" value="Add To Cart!"/>
+     			</form>
+
+       </div>
+     </div>
 	<h3>
 		ViewNow – Subscribe to RemoteEye® and view your camera’s live feed. <br />
 		ViewNow offers 30 days of non-stop streaming service.
@@ -31,7 +37,15 @@
 			<li>Perfect for checking things out at home, your baby room, and your pet at any time!</li>
 			<li>RemoteEye® provides for easy playback of videos*</li>
 		</ul>
-		<div class="subscribeToCart" id="subViewNow">Add To Cart!</div>
+		<div class="subscribeToCart" id="subViewNow">
+
+        
+		<form action="addtocart" method="post">
+     			<input type="hidden"name=productId value="<c:out value="y_medium"/>">
+     			<input type="submit" value="Add To Cart!"/>
+     			</form>
+        
+        </div>
 	</div>
 	
 	<h3>
@@ -49,7 +63,13 @@
 			<li>Suitable for those who are keen to secure spaces or just want to capture moments in life.</li>
 			<li>RemoteEye® provides for easy playback of videos AND recorded videos*</li>
 		</ul>
-		<div class="subscribeToCart" id="subStoreNView">Add To Cart!</div>
+		<div class="subscribeToCart" id="subStoreNView">
+		
+		<form action="addtocart" method="post">
+     			<input type="hidden"name=productId value="<c:out value="y_exelence"/>">
+     			<input type="submit" value="Add To Cart!"/>
+     			</form>
+		</div>
 	</div>
 	
 </div>

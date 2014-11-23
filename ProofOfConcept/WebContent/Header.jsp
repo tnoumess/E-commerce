@@ -28,7 +28,7 @@
  	<script type="text/javascript">
 	   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
 	</script>
-  
+	  
 	<script src="SCRIPT/jquery-ui.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="CSS/jquery-ui.css" />
@@ -82,7 +82,7 @@ var __adobewebfontsappname__ = "muse";
       <!-- state-based BG images -->
      </form>    
      <div class="clip_frame grpelem" id="u509"><!-- image -->
-        <a href="cart.jsp" id="link"><img class="block" id="u509_img" src="images/cartimg.png" alt="" width="47" height="47"/></a>
+        <a href="listcart" id="link"><img class="block" id="u509_img" src="images/cartimg.png" alt="shopping cart img" width="47" height="47"/></a>
        </div>
       </div>
       <ul class="MenuBar clearfix colelem" id="menuu75"><!-- horizontal box -->

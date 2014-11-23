@@ -41,13 +41,36 @@
 					<constructor-arg value="images/Nokia.jpg"/>
 					<constructor-arg value="Plug in your existing web cam to this thing and it wirelessly transmit to your router"/>
 					<constructor-arg value="49.99"/>
-				</bean>				
+				</bean>		
+				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
+					<constructor-arg value="y_free"/>		
+					<constructor-arg value="FREE TRIAL"/>
+					<constructor-arg value=""/>
+					<constructor-arg value="Access to two tiers ViewNow and StoreNView capabilities as listed below.Free trial will end after 7 days, after which you can choose between two tiers."/>
+					<constructor-arg value="0.00"/>
+				</bean>	
+				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
+					<constructor-arg value="y_medium"/>		
+					<constructor-arg value="SATURN"/>
+					<constructor-arg value=""/>
+					<constructor-arg value="Click and stream from any computer to view from your selected camera."/>
+					<constructor-arg value="9.99"/>
+				</bean>	
+				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
+					<constructor-arg value="y_exelence"/>		
+					<constructor-arg value="JUPITER"/>
+					<constructor-arg value=""/>
+					<constructor-arg value="Unlimited access to recorded media any time within 30 days."/>
+					<constructor-arg value="44.99"/>
+				</bean>			
 			</list>
 		</constructor-arg>
 	</bean>
 	
 	<!-- Persistence -->
 	<bean id="userDAO" class="edu.gmu.infs640.proofofconcept.persistence.UserDaoImpl"/>
+	<bean id="orderDAO" class="edu.gmu.infs640.proofofconcept.persistence.OrderDaoImpl"/>
+	<bean id="orderdescriptionDAO" class="edu.gmu.infs640.proofofconcept.persistence.OrderDescriptionDaoImpl"/>
 	<bean id="productDAO" class="edu.gmu.infs640.proofofconcept.persistence.ProductDaoImpl"/>
 	
 	<bean id="myEmf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

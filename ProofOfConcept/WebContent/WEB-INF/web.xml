@@ -37,11 +37,27 @@
 		<servlet-name>mvc</servlet-name>
 		<url-pattern>/addtocart</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>mvc</servlet-name>
+		<url-pattern>/removefromcart</url-pattern>
+	</servlet-mapping>
   	<servlet-mapping>
     	<servlet-name>mvc</servlet-name>
     	<url-pattern>/product</url-pattern>
   	</servlet-mapping>	
-    
+  	<servlet-mapping>
+    	<servlet-name>mvc</servlet-name>
+    	<url-pattern>/listcart</url-pattern>
+  	</servlet-mapping>
+  		<servlet-mapping>
+    	<servlet-name>mvc</servlet-name>
+    	<url-pattern>/checkout</url-pattern>
+  	</servlet-mapping>
+  		
+    <servlet-mapping>
+    	<servlet-name>mvc</servlet-name>
+    	<url-pattern>/checkpayment</url-pattern>
+  	</servlet-mapping>
 	<!-- Welcome File List -->
   	<welcome-file-list>
     	<welcome-file>Welcome.jsp</welcome-file>

@@ -1,25 +1,19 @@
 package edu.gmu.infs640.proofofconcept.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.List;
 import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
-import edu.gmu.infs640.proofofconcept.persistence.Model.Item;
+import edu.gmu.infs640.proofofconcept.persistence.jpa.Product;
 
 @Controller
 public class CartController {
@@ -27,37 +21,93 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 	
 	/*private final UserDao userDao;
 	
-	public CartController(final UserDao userDao){
+public CartController(final UserDao userDao){
 		this.userDao = userDao;
 	}*/
 //List<Item> cart;
 	
-	@RequestMapping(value="/listcart", method = RequestMethod.POST)
+/*	@RequestMapping(value="/listcart"/*, method = RequestMethod.POST*//* )
 	public void listcart(final HttpServletRequest request,
 			final HttpServletResponse response){
+		Hashtable<String,Integer> mycart=new Hashtable<String, Integer>();
+		HttpSession session=request.getSession();
+		//session.setAttribute("cart", new Hashtable<String, Integer>());
+		@SuppressWarnings("unchecked")
+		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
+		Set values=cart.keySet();
+		System.out.println("keys"+values);
+		Iterator iter=values.iterator();
+		while(iter.hasNext()){
+			System.out.println("val"+iter.next());
+			
 		
+		}
+		
+		
+		try {
+			response.sendRedirect("cart.jsp");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
-	
+	*/
 	@RequestMapping(value="/addtocart", method = RequestMethod.POST)
-	public void addtocart(@ModelAttribute Item item,final HttpServletRequest request,
+	public void addtocart(@ModelAttribute Product product,final HttpServletRequest request,
 			final HttpServletResponse response/*,@ModelAttribute("Cart") List<Item> cart*/){
 		//cart.add(item);
-		System.out.println(item.getItemId());
-		System.out.println(item.getQuantity());
+		System.out.println(product.getProductId());
+		//System.out.println(item.getQuantity());
 		HttpSession session=request.getSession();
 		if(session.getAttribute("cart")==null)
 			session.setAttribute("cart", new Hashtable<String, Integer>());
 		@SuppressWarnings("unchecked")
 		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
-		if(!cart.containsKey(item.getItemId()))
-			cart.put(item.getItemId(), 0);
-		cart.put(item.getItemId(), cart.get(item.getItemId()) +item.getQuantity());
+		if(!cart.containsKey(product.getProductId()))
+			{cart.put(product.getProductId(),1);}
+		
+			//cart.put(item.getItemId(), cart.get(item.getItemId()) +item.getQuantity());
+		//logger.info("just added" +item.getQuantity()+ " camera");
 		
 		System.out.println("my cart is:"+cart.toString());
 		System.out.println("my session:"+session.getAttribute("user"));
+		if(product.getProductId().startsWith("y")){
+			try {
+				response.sendRedirect("GetStarted.jsp");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else
 		try {
-			response.sendRedirect("Products.jsp");
+			response.sendRedirect("product");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	@RequestMapping(value="/removefromcart", method = RequestMethod.POST)
+	public void removetocart(@ModelAttribute Product product,final HttpServletRequest request,
+			final HttpServletResponse response/*,@ModelAttribute("Cart") List<Item> cart*/){
+		
+		System.out.println(product.getProductId());		
+		HttpSession session=request.getSession();
+		
+		if(session.getAttribute("cart")!=null){
+			
+		@SuppressWarnings("unchecked")
+		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
+			if(cart.containsKey(request.getParameter("productId")))
+				cart.remove(request.getParameter("productId"));
+			
+				}
+		try { 
+			if(session.getAttribute("cart")!=null){
+			Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
+			if(cart.isEmpty())session.invalidate();}
+			response.sendRedirect("product");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

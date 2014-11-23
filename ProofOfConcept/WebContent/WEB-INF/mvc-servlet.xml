@@ -14,10 +14,13 @@
 	<!-- Controller Beans -->
 	<bean id="loginController" class="edu.gmu.infs640.proofofconcept.controller.LoginController">
 		<constructor-arg ref="userDAO" />
+		
 	</bean>
 	
 	<bean id="productController" class="edu.gmu.infs640.proofofconcept.controller.ProductController">
 		<constructor-arg ref="productDAO" />
+		<constructor-arg ref="orderDAO" />
+		<constructor-arg ref="orderdescriptionDAO" />
 	</bean>
 	
 	<bean id="cartController" class="edu.gmu.infs640.proofofconcept.controller.CartController" scope="session">
