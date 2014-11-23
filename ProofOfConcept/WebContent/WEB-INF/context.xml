@@ -36,11 +36,11 @@
 					<constructor-arg value="119.99"/>
 				</bean>				
 				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
-					<constructor-arg value="USBBox1"/>		
-					<constructor-arg value="USB Wireless Box Thingy"/>
-					<constructor-arg value="images/Nokia.jpg"/>
-					<constructor-arg value="Plug in your existing web cam to this thing and it wirelessly transmit to your router"/>
-					<constructor-arg value="49.99"/>
+					<constructor-arg value="Samsung1"/>		
+					<constructor-arg value="Samsung Full HD Wifi IP Camera"/>
+					<constructor-arg value="images/Samsung.png"/>
+					<constructor-arg value="High-end and HD perfect for RemoteEye® services. With the Samsung Full HD Wifi IP Camera, your video will be streamed wirelessly to your computer and worry free choosing where to place it! This camera also features a microphone so that your streams would have voice!"/>
+					<constructor-arg value="189.99"/>
 				</bean>		
 				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
 					<constructor-arg value="y_free"/>		
