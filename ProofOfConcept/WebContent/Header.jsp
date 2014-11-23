@@ -8,6 +8,7 @@
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!doctype html>
 <html class="html">
  <head>
@@ -99,12 +100,19 @@ var __adobewebfontsappname__ = "muse";
 								out.print("<input class='submit-btn NoWrap grpelem' id='u485-17' type='submit' value='' tabindex='6' formaction='logout'/>");
 							}
 						%>
-      
+
       <!-- state-based BG images -->
       <!-- state-based BG images -->
      </form>    
-     <div class="clip_frame grpelem" id="u509"><!-- image -->
-        <a href="listcart" id="link"><img class="block" id="u509_img" src="images/cartimg.png" alt="shopping cart img" width="47" height="47"/></a>
+     <div class="clip_frame grpelem" id="u509">
+
+     	<!-- Shopping Cart -->
+        <a href="listcart" id="link">
+        	<img class="block" id="u509_img" src="images/cartimg.png" alt="shopping cart img" width="47" height="47"/>
+	        <c:if test="${not empty cart}">
+		      <span id="itemsInCart"><c:out value="${fn:length(cart)}"/></span>
+			</c:if>
+		</a>
        </div>
       </div>
       <ul class="MenuBar clearfix colelem" id="menuu75"><!-- horizontal box -->
