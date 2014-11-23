@@ -22,18 +22,18 @@
 		<constructor-arg>
 			<list>
 				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
-					<constructor-arg value="Camera1"/>		
-					<constructor-arg value="Cool Kid Camera"/>
-					<constructor-arg value="images/Nokia.jpg"/>
-					<constructor-arg value="This cool kid camera is the most awesome camera ever, for rizzle!"/>
-					<constructor-arg value="123.56"/>
+					<constructor-arg value="Motorola1"/>		
+					<constructor-arg value="Motorola Baby Monitor"/>
+					<constructor-arg value="images/Motorolla_Baby.png"/>
+					<constructor-arg value="Simple and affordable, also portable with RemoteEye® services. Excellent for monitoring your little loved ones."/>
+					<constructor-arg value="64.99"/>
 				</bean>
 				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
-					<constructor-arg value="Camera2"/>		
-					<constructor-arg value="Low End Camera"/>
-					<constructor-arg value="images/Nokia.jpg"/>
-					<constructor-arg value="This low end camera kinda does basic stuff and stuff"/>
-					<constructor-arg value="123.45"/>
+					<constructor-arg value="Motorola2"/>		
+					<constructor-arg value="Motorola Extra Outdoor Camera"/>
+					<constructor-arg value="images/Motorolla_Adv.png"/>
+					<constructor-arg value="Powerful and for the outdoors, portable with RemoteEye® services. Excellent for monitoring your little loved ones while outdoors. Could also be used for monitoring pets outside."/>
+					<constructor-arg value="119.99"/>
 				</bean>				
 				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
 					<constructor-arg value="USBBox1"/>		
@@ -63,13 +63,7 @@
 					<constructor-arg value="Unlimited access to recorded media any time within 30 days."/>
 					<constructor-arg value="44.99"/>
 				</bean>
-				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
-					<constructor-arg value="Motorola1"/>		
-					<constructor-arg value="Motorola Baby Monitor"/>
-					<constructor-arg value="images/Motorolla_Baby.png"/>
-					<constructor-arg value="Simple and affordable, also portable with RemoteEye® services. Excellent for monitoring your little loved ones."/>
-					<constructor-arg value="64.99"/>
-				</bean>			
+							
 			</list>
 		</constructor-arg>
 	</bean>
