@@ -62,6 +62,13 @@
 					<constructor-arg value=""/>
 					<constructor-arg value="Unlimited access to recorded media any time within 30 days."/>
 					<constructor-arg value="44.99"/>
+				</bean>
+				<bean class="edu.gmu.infs640.proofofconcept.persistence.jpa.Product">
+					<constructor-arg value="Motorola1"/>		
+					<constructor-arg value="Motorola Baby Monitor"/>
+					<constructor-arg value="images/Motorolla_Baby.png"/>
+					<constructor-arg value="Simple and affordable, also portable with RemoteEye® services. Excellent for monitoring your little loved ones."/>
+					<constructor-arg value="64.99"/>
 				</bean>			
 			</list>
 		</constructor-arg>
