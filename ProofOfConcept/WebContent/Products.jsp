@@ -13,7 +13,7 @@
 <div>
    
     <c:forEach items="${products}" var="prod" begin="0" end="2">
-    	<div style="display:inline-block;width:220px;margin-right:5px;margin-left:5px;vertical-align:top;">
+    	<div style="display:inline-block;width:250px;margin-right:15px;margin-left:15px;vertical-align:top;">
     		<div><c:out value="${prod.name}"/></div>
     		<img height="250"   src="<c:out value="${prod.imageUrl}"/>"/>
     		<div style="text-align:right;">
