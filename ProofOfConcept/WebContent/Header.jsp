@@ -30,6 +30,27 @@
 	</script>
 	  
 	<script src="SCRIPT/jquery-ui.js"></script>
+	<script>
+
+	$( document ).ready(function() {
+
+	$("#u509_img").mouseover(function(){
+
+		if(document.getElementById("good").value=="null")
+
+			//alert()
+
+			 $("#link").bind('click',false);
+
+	
+
+	});
+
+});
+
+	</script>
+
+	
 	
 	<link rel="stylesheet" type="text/css" href="CSS/jquery-ui.css" />
 	<link rel="stylesheet" type="text/css" href="CSS/getStarted.css" />
@@ -55,6 +76,7 @@ var __adobewebfontsappname__ = "muse";
      <div class="clip_frame grpelem" id="u69"><!-- image -->
       <a href="Welcome.jsp"><img class="block" id="u69_img" src="images/INFS640.gif" alt="" width="248" height="104"/></a>
      </div>
+      <% Object val=request.getSession().getAttribute("cart");%><input type="hidden" id="good" value="<% out.print(val);%>">
      <div class="clearfix grpelem" id="ppwidgetu450"><!-- column -->
       <div class="clearfix colelem" id="pwidgetu450"><!-- group -->
        
