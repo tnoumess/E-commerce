@@ -12,7 +12,7 @@
       } %>
 <div>
    
-    <c:forEach items="${products}" var="prod" begin="0" end="5">
+    <c:forEach items="${products}" var="prod" begin="0" end="2">
     	<div style="display:inline-block;width:250px;margin: 0px 15px 30px 15px;vertical-align:top;">
     		<div><c:out value="${prod.name}"/></div>
     		<img height="250"   src="<c:out value="${prod.imageUrl}"/>"/>
