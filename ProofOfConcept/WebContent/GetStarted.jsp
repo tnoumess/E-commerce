@@ -8,7 +8,7 @@
 <%@ include file="Header.jsp" %> 
 
 <div id="subscriptionPlans">
-	<div id="subscriptionTitle">RemoteEye's Subscription Plans</div>
+	<div id="tagline">RemoteEye's Subscription Plans</div>
 	<div class="planContainer" id="planFree">
 		<div class="plan">
 			<div class="planTitle">Free Trial </div>

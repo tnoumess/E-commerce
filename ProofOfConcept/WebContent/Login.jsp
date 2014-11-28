@@ -16,7 +16,7 @@
 			<div class="formRow">
 				<div class="formLabel">Password:</div><input type="password" id="password" name="password"/>
 			</div>
-			<div style="text-align:right;">
+			<div style="text-align:center;">
 				<input type="submit" value="Sign In"/>
 			</div>
 			<div id="error" class="error">
