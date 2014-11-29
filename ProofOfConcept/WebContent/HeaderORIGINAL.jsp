@@ -13,7 +13,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>INFS640 Project</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
 	<script src="SCRIPT/jquery.js">  </script>
 	<script>
 	$( document ).ready(function() {
@@ -42,7 +42,7 @@
 								out.print("<a href=\"Login.jsp\">Sign In</a>");
 							}
 							else {
-								out.print("<a href=\"UserHome.jsp\">" + userName.toString()+"</a>");
+								out.print("<a href=\"UserFeed.jsp\">" + userName.toString()+"</a>");
 								showSignOut = true;
 							}
 						%>

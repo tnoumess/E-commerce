@@ -10,23 +10,32 @@
     	  session.invalidate();
     	  
       } %>
+<div id="tagline">Buy A Camera to Get Started!</div>
+ <c:out value="${request.getSession().getAttribute('cart')}"/>
 <div>
    
-    <c:forEach items="${products}" var="prod" begin="0" end="2">
-    	<div style="display:inline-block;width:220px;margin-right:5px;margin-left:5px;vertical-align:top;">
+     
+    <c:forEach items="${products}" var="prod" begin="0" end="2"  varStatus="loop">
+    	<div style="display:inline-block;width:250px;margin: 0px 15px 30px 15px;vertical-align:top;">
+
     		<div><c:out value="${prod.name}"/></div>
     		<img height="250"   src="<c:out value="${prod.imageUrl}"/>"/>
     		<div style="text-align:right;">
     			$<c:out value="${prod.price}"/>
-    			<form action="addtocart" method="post" id="C_Nokia" style="display:inline-block;">	
-     				<input type="hidden" name="productId" value="${prod.productId}">
-     				<input type="submit" value="Add to Cart"/>
-     			</form>	
-     			<form action="removefromcart" method="post">
-     			<input type="hidden"name=productId value="<c:out value="${prod.productId}"/>">
-     			<input type="submit" value="remove to Cart"/>
-     			</form>
-				
+    			<c:choose>
+	    			<c:when test="${empty cart || cart.containsKey(prod.productId) == false}">
+		    			<form action="addtocart" method="post" id="addProduct${loop.index}"  style="display:inline-block;">	
+		     				<input type="hidden" name="productId" value="${prod.productId}">
+		     				<div class="buttonRemoteEye productAdd" onclick="document.getElementById('addProduct${loop.index}').submit();">Add to Cart </div>
+		     			</form>	
+	     			</c:when>
+	     			<c:otherwise>
+		     			<form action="removefromcart" method="post" id="removeProduct${loop.index}" style="display:inline-block;">
+			     			<input type="hidden"name=productId value="<c:out value="${prod.productId}"/>">
+			     			<div class="buttonRemoteEyeRed productRemove" onclick="document.getElementById('removeProduct${loop.index}').submit();">Remove from Cart</div>
+		     			</form>
+					</c:otherwise>
+				</c:choose>
     		</div>
     		<div><c:out value="${prod.description}"/></div>
     	</div>

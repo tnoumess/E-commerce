@@ -8,6 +8,7 @@
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!doctype html>
 <html class="html">
  <head>
@@ -19,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="CSS/site_global.css"/>
   <link rel="stylesheet" type="text/css" href="CSS/master_a-master.css"/>
   <link rel="stylesheet" type="text/css" href="CSS/home.css" id="pagesheet"/>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
   
     <!-- jQuery Include -->
   	<script type="text/javascript">
@@ -89,7 +90,7 @@ var __adobewebfontsappname__ = "muse";
 								out.print("<div class='fld-grp clearfix grpelem' id='widgetu460' data-required='true'><!-- none box --><label class='fld-label actAsDiv clearfix grpelem' id='u464-4' for='widgetu460_input'><!-- content --><span class='actAsPara'>Your Account</span></label></div><input class='submit-btn NoWrap grpelem' id='u467-17' type='submit' value='' tabindex='3' formaction='Login.jsp'/>");
 							}
 							else {
-								out.print("<div class='fld-grp clearfix grpelem' id='widgetu460' data-required='true'><!-- none box --><a href=\"UserHome.jsp\">" + userName.toString()+"</a></div>");
+								out.print("<div class='fld-grp clearfix grpelem' id='widgetu460' data-required='true'><!-- none box --><a href=\"UserFeed.jsp\">" + userName.toString()+"</a></div>");
 								showSignOut = true;
 							}
 						%>
@@ -99,12 +100,19 @@ var __adobewebfontsappname__ = "muse";
 								out.print("<input class='submit-btn NoWrap grpelem' id='u485-17' type='submit' value='' tabindex='6' formaction='logout'/>");
 							}
 						%>
-      
+
       <!-- state-based BG images -->
       <!-- state-based BG images -->
      </form>    
-     <div class="clip_frame grpelem" id="u509"><!-- image -->
-        <a href="listcart" id="link"><img class="block" id="u509_img" src="images/cartimg.png" alt="shopping cart img" width="47" height="47"/></a>
+     <div class="clip_frame grpelem" id="u509">
+
+     	<!-- Shopping Cart -->
+        <a href="listcart" id="link">
+        	<img class="block" id="u509_img" src="images/cartimg.png" alt="shopping cart img" width="47" height="47"/>
+	        <c:if test="${not empty cart}">
+		      <span id="itemsInCart"><c:out value="${fn:length(cart)}"/></span>
+			</c:if>
+		</a>
        </div>
       </div>
       <ul class="MenuBar clearfix colelem" id="menuu75"><!-- horizontal box -->
@@ -121,7 +129,7 @@ var __adobewebfontsappname__ = "muse";
         <div class="MenuItemLabel NoWrap clearfix grpelem" id="u139-4"><!-- content --><p>Products</p></div></a>
        </li>
        <li class="MenuItemContainer clearfix grpelem" id="u147"><!-- vertical box -->
-        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u150" href="download.html"><!-- horizontal box -->
+        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u150" href="Download.jsp"><!-- horizontal box -->
         <div class="MenuItemLabel NoWrap clearfix grpelem" id="u153-4"><!-- content --><p>Download</p></div></a>
        </li>
       </ul>

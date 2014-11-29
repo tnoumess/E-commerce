@@ -72,9 +72,9 @@ int total=0;
     
     </div>
     
-</div>	<form action="checkout" method="post">
+</div>	<form action="checkout" method="post" id="checkoutForm">
      			<input type="hidden"name=productId value="<c:out value="y_free"/>">
-     			<input type="submit" value="Checkout!"/>
+     			<div class="buttonRemoteEye cartCheckout" onclick="document.getElementById('checkoutForm').submit();">Checkout! </div>
      			</form>
 	
 	</div>
