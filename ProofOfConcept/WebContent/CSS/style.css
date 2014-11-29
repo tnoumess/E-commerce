@@ -398,3 +398,11 @@ a div.userMenu {
 	text-align: center;
 	margin: 5px;
 }
+
+.cartCheckout{
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	width: 100px;
+	margin:auto;
+}
