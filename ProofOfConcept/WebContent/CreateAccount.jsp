@@ -6,7 +6,7 @@
 %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ include file="Header.jsp" %> 
-
+<link href="CSS/mysheet.css" rel="stylesheet" type="text/css" />
 <div style="height: 500px; margin: -350px;">
 	<form action="createaccount" method="POST">
 		<div style="margin:0 auto;max-width:300px">

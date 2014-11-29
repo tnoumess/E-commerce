@@ -19,40 +19,7 @@ import edu.gmu.infs640.proofofconcept.persistence.jpa.Product;
 public class CartController {
 static private final Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
-	/*private final UserDao userDao;
 	
-public CartController(final UserDao userDao){
-		this.userDao = userDao;
-	}*/
-//List<Item> cart;
-	
-/*	@RequestMapping(value="/listcart"/*, method = RequestMethod.POST*//* )
-	public void listcart(final HttpServletRequest request,
-			final HttpServletResponse response){
-		Hashtable<String,Integer> mycart=new Hashtable<String, Integer>();
-		HttpSession session=request.getSession();
-		//session.setAttribute("cart", new Hashtable<String, Integer>());
-		@SuppressWarnings("unchecked")
-		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
-		Set values=cart.keySet();
-		System.out.println("keys"+values);
-		Iterator iter=values.iterator();
-		while(iter.hasNext()){
-			System.out.println("val"+iter.next());
-			
-		
-		}
-		
-		
-		try {
-			response.sendRedirect("cart.jsp");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
-	*/
 	@RequestMapping(value="/addtocart", method = RequestMethod.POST)
 	public void addtocart(@ModelAttribute Product product,final HttpServletRequest request,
 			final HttpServletResponse response/*,@ModelAttribute("Cart") List<Item> cart*/){
