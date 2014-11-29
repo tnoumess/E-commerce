@@ -1,0 +1,408 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	 a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small,
+	 strong, sub, sup, var, b, i, hr, dl, dt, dd, ol, ul, li, fieldset, form, label,
+	 legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	 details, figure, figcaption, hgroup, menu, footer, header, nav, section, summary,
+	 time, mark, audio, video {
+		margin: 0;
+		padding: 0;	
+}
+
+body {
+	font-family: arial, sans-serif;
+	font-size: 16px;
+}
+
+#outerDiv {
+	width:100%;
+	text-align:center;
+}
+		
+#innerDiv {
+	text-align:left;
+	margin: 0 auto;
+	max-width: 1200px;
+	min-width: 970px
+}
+
+.paragraphHeader {
+	color: purple;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.paragraphHeaderImage {
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+	vertical-align:bottom;
+}
+
+#topbar {
+    height: 65px;
+    margin-top: 10px;
+    padding-top: 30px;
+    position: relative;
+    text-align: center;
+}
+
+#bottombar{
+    border-top: 1px solid #5e5e5e;
+    clear: both;
+    font-family: times new roman;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    padding-top: 10px;
+    text-align: center;
+    width: 90%;
+}
+
+#logo {
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	width: 160px;
+}
+
+.rightmenu {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	text-align: right;
+}
+		
+.menuItem {
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    width: 150px;
+    font-size: 20px;
+}
+
+.menuItemSelected {
+	background-color: #c3c3c3;
+	border-radius: 5px
+}
+
+.menuItem a {
+   text-decoration: none;
+   color: #4f4ff2;
+}
+
+.formLabel {
+	display:inline-block;
+	width: 135px;
+}
+
+.formRow {
+	margin-bottom: 4px;
+}
+
+.error {
+	font-weight: bold;
+	color: red;
+}
+
+#tagline{
+	margin-top:-10px;
+	margin-bottom:30px;
+	font-weight:bold;
+	color: #0071BC;
+	font-size:20px;
+}
+
+
+/*UserTopMenu.jsp*/
+.userMenu{
+	
+    width: 100%;
+    /*height: 90px;*/
+    margin-left: 5px;
+    margin-top: -40px;
+    /*border*/
+	border-bottom: 2px solid grey;
+	margin-bottom: 10px;
+}
+
+.menuItem{
+	height: 25px;
+	background: white;
+	font-size: 20px;
+	color: #0071BC;
+	width:49%;
+
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	margin-right:1px;
+	border: 1px solid grey;
+	border-bottom-color: white;
+}
+div.userMenu div:hover,
+a div.userMenu:hover{
+	color: #0000FF;
+	cursor: pointer;
+}
+
+a div.userMenu {
+	text-decoration: none;
+}
+
+.userMenu .leftMenuSelected{
+	background-color: #CCCCCC;
+}
+
+.menuText{
+	position: relative;
+	top: 4px;
+}
+
+/*Body for User Related Content*/
+
+/*Home*/
+.contentItem{
+	float: left;
+	margin: 15px;
+	padding: 5px;
+	
+	/*border*/
+	border: 1px solid #ADAD99;
+}
+.userContentTitle{
+	font-size: 25px;
+	color: #00CCFF;
+	
+	border-bottom-style: dotted;
+	border-color: #ADAD99;
+}
+.userContentData{
+	margin-left: 5px;
+	margin-top: 3px;
+	cursor: pointer;
+}
+.add{
+	padding-left: 5px;
+	padding-top: 3px;
+	cursor: pointer;
+	background-color: #DFDFDD;
+}
+
+
+/*My Feed's page*/
+.userTitle{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-weight: bold;
+	color: #0071BC;
+	font-size: 20px;
+}
+#mainVideoPanel{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+#mainVideo{
+	width: 75%;
+	cursor: pointer;
+}
+#shareVideo{
+	clear:both;
+	float: right;
+	margin: 5px;
+
+	/*circular border*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ADAD99;
+	padding: 3px;
+	
+	cursor: pointer;
+}
+#shareVideo:hover{
+	background-color: #ADAD99;
+}
+
+#videoFeedPanel{
+	clear:both;	
+	overflow: auto;
+	white-space: nowrap;
+}
+#videoFeedPanel>div{
+	float: left;
+	margin-right:5px;
+}
+#videoFeedPanel>div>div{
+	color: #0071BC;
+}
+#videoFeedPanel>div>img{
+	cursor: pointer;
+	width:330px;
+}
+#videoFeedPanel>div>img:hover{
+	opacity: 0.75;
+}
+
+.videoPreview{
+	width: 80px;
+	height:60px;
+	float:left;
+}
+
+/*My Videos' Page*/
+#videoPreviewPanel{
+	text-align: left;
+}
+#videoPreviewPanel > div> img{
+	cursor: pointer;
+	margin: 10px;
+	width: 300px;
+}
+
+#videoPreviewPanel > div > img:hover{
+	opacity: 0.75;
+}
+
+.imagePreview{
+	width: 310px;
+	float:left;
+}
+.imagePreview > div{
+	text-align: center;
+	margin-bottom: 5px;
+	color: #0071BC;
+}
+#previewVideo{
+	width:100%;
+	cursor:pointer;
+}
+.ui-dialog-titlebar{
+	background-color: #ffffff;
+}
+
+/*Download Page*/
+#download{
+	margin:auto;
+}
+#downloadInstr{
+	float:left;
+	margin-left: 100px;
+	margin-top:5px;
+	
+	text-align: left;
+}
+#downloadButton{
+	float:left;
+	margin-left: 25px;
+	
+	width: 200px;
+	padding: 20px 0px;*/
+	text-align: center;
+	background-color: #0071bc;
+	color:white;
+	
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; /* Webkit */
+	-moz-user-select: none;    /* Firefox */
+	-ms-user-select: none;     /* IE 10  */
+	
+	/* Currently not supported in Opera but will be soon */
+	-o-user-select: none;
+	user-select: none; 
+	
+	/*button effect*/
+	background: #65a9d7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+	background: -o-linear-gradient(top, #3e779d, #65a9d7);
+	
+	/*border*/
+	border-radius: 10px;
+}
+
+#downloadButton:hover{
+	color: white;
+	border-top-color: #056aa8;
+	background: #056aa8;
+}
+
+#downloadStart{
+	position: relative;
+	left: -215px;
+	top: 20px;
+}
+
+
+.buttonRemoteEye{
+	background-color: #0071bc;
+	color: white;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	background: #65a9d7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+	background: -o-linear-gradient(top, #3e779d, #65a9d7);
+	border-radius: 10px;
+}
+
+.buttonRemoteEye:hover{
+	color: white;
+	border-top-color: #056aa8;
+	background: #056aa8;
+}
+
+.buttonRemoteEyeRed{
+	color: white;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	
+	background: #ff6a6a;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff0000), to(#ff6a6a));
+	background: -webkit-linear-gradient(top, #ff0000, #ff6a6a);
+	background: -moz-linear-gradient(top, #ff0000, #ff6a6a);
+	background: -ms-linear-gradient(top, #ff0000, #ff6a6a);
+	background: -o-linear-gradient(top, #ff0000, #ff6a6a);
+}
+.buttonRemoteEyeRed:hover{
+	color: white;
+	border-top-color: #ff0000;
+	background: #ff0000;
+}
+
+.productAdd{
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+}
+
+.productRemove{
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	margin: 5px;
+}
+
+.cartCheckout{
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	width: 100px;
+	margin:auto;
+}
