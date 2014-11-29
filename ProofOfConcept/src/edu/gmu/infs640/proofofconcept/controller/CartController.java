@@ -23,22 +23,20 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 	@RequestMapping(value="/addtocart", method = RequestMethod.POST)
 	public void addtocart(@ModelAttribute Product product,final HttpServletRequest request,
 			final HttpServletResponse response/*,@ModelAttribute("Cart") List<Item> cart*/){
-		//cart.add(item);
-		System.out.println(product.getProductId());
-		//System.out.println(item.getQuantity());
 		HttpSession session=request.getSession();
 		if(session.getAttribute("cart")==null)
 			session.setAttribute("cart", new Hashtable<String, Integer>());
 		@SuppressWarnings("unchecked")
 		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
 		if(!cart.containsKey(product.getProductId()))
-			{cart.put(product.getProductId(),1);}
+		{
+			cart.put(product.getProductId(),1);
+		}
 		
 			//cart.put(item.getItemId(), cart.get(item.getItemId()) +item.getQuantity());
 		//logger.info("just added" +item.getQuantity()+ " camera");
 		
-		System.out.println("my cart is:"+cart.toString());
-		System.out.println("my session:"+session.getAttribute("user"));
+		
 		if(product.getProductId().startsWith("y")){
 			try {
 				response.sendRedirect("GetStarted.jsp");
@@ -59,7 +57,6 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 	public void removetocart(@ModelAttribute Product product,final HttpServletRequest request,
 			final HttpServletResponse response/*,@ModelAttribute("Cart") List<Item> cart*/){
 		
-		System.out.println(product.getProductId());		
 		HttpSession session=request.getSession();
 		
 		if(session.getAttribute("cart")!=null){
@@ -70,14 +67,24 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 				cart.remove(request.getParameter("productId"));
 			
 				}
-		try { 
-			if(session.getAttribute("cart")!=null){
-			Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
-			if(cart.isEmpty())session.invalidate();}
-			response.sendRedirect("product");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
+		if(product.getProductId().startsWith("y")){
+			try {
+				response.sendRedirect("GetStarted.jsp");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			try { 
+				if(session.getAttribute("cart")!=null){
+				Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
+				if(cart.isEmpty())session.invalidate();}
+				response.sendRedirect("product");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	}

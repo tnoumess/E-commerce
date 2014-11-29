@@ -13,9 +13,7 @@
 <div id="tagline">Buy A Camera to Get Started!</div>
  <c:out value="${request.getSession().getAttribute('cart')}"/>
 <div>
-   
-     
-    <c:forEach items="${products}" var="prod" begin="0" end="2"  varStatus="loop">
+   <c:forEach items="${products}" var="prod" begin="0" end="2"  varStatus="loop">
     	<div style="display:inline-block;width:250px;margin: 0px 15px 30px 15px;vertical-align:top;">
 
     		<div><c:out value="${prod.name}"/></div>

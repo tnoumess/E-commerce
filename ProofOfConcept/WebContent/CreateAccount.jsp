@@ -9,7 +9,8 @@
 
 <link href="CSS/mysheet.css" rel="stylesheet" type="text/css" />
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div style="height: 500px; margin: -350px;">
+<div style="height: 250px;">
+
 
 	<form action="createaccount" method="POST">
 		<div style="margin:0 auto;max-width:300px">
