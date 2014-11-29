@@ -8,7 +8,7 @@
 <%@ include file="Header.jsp" %> 
 
 <link href="CSS/mysheet.css" rel="stylesheet" type="text/css" />
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 <div style="height: 250px;">
 
 
