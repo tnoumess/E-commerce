@@ -12,7 +12,7 @@
 
 
 	<div id="videoPreviewPanel">
-		<div class="imagePreview"><img src="images/dogPrev.png" onclick="playvideo('livingroom.mp4', 'Roughing It Ralph')"/> <div>Roughing It Ralph</div></div>
+		<div class="imagePreview"><img src="images/dogPrev.png" onclick="playvideo('bedroom.mp4', 'Roughing It Ralph')"/> <div>Roughing It Ralph</div></div>
 		<div  class="imagePreview"><img src="images/trashPrev.png" onclick="playvideo('trash.mp4', 'Messy Megan')" /> <div>Messy Megan</div></div>
 		<div  class="imagePreview"><img src="images/diningPrev.png" onclick="playvideo('diningRoom.mp4', 'Silly Sally');" /> <div>Silly Sally</div></div>
 	</div>

@@ -19,7 +19,7 @@
 	<div id="videoFeedPanel">
 		<div><img src="images/diningPrev.png" onclick="playvideo('diningRoom.mp4');" /><div>Living Room</div></div>
 		<div><img src="images/trashPrev.png" onclick="playvideo('trash.mp4');" /><div>Kitchen</div></div>
-		<div><img src="images/dogPrev.png" onclick="playvideo('livingroom.mp4');" /><div>Bed Room</div></div>
+		<div><img src="images/dogPrev.png" onclick="playvideo('bedroom.mp4');" /><div>Bed Room</div></div>
 	</div>
 </div>
 
