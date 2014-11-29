@@ -127,6 +127,50 @@
    background: #0071bc;
 }
 
+
+/*Button - Add To Cart*/
+#subscriptionPlans div .removeFromCart{
+	width: 100%;
+	padding: 20px 0px;
+	text-align: center;
+	/*background-color: #7E7E7E;*/
+	background-color: #0071bc;
+	
+	/*float to bottom*/
+	left:0;
+	
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; /* Webkit */
+	-moz-user-select: none;    /* Firefox */
+	-ms-user-select: none;     /* IE 10  */
+	
+	/* Currently not supported in Opera but will be soon */
+	-o-user-select: none;
+	user-select: none; 
+	
+	/*button effect*/
+	background: #ff6a6a;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff0000), to(#ff6a6a));
+	background: -webkit-linear-gradient(top, #ff0000, #ff6a6a);
+	background: -moz-linear-gradient(top, #ff0000, #ff6a6a);
+	background: -ms-linear-gradient(top, #ff0000, #ff6a6a);
+	background: -o-linear-gradient(top, #ff0000, #ff6a6a);
+	
+	/*border on botton*/
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+#subscriptionPlans div .removeFromCart:hover{
+	color: white;
+	border-top-color: #ff0000;
+	background: #ff0000;
+}
+#subscriptionPlans div .removeFromCart:active{
+	border-top-color: #ff0000;
+	background: #ff0000;
+}
+
 .subscribeToCart form input{
 	
 	

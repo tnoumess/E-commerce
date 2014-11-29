@@ -100,14 +100,24 @@ public CartController(final UserDao userDao){
 				cart.remove(request.getParameter("productId"));
 			
 				}
-		try { 
-			if(session.getAttribute("cart")!=null){
-			Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
-			if(cart.isEmpty())session.invalidate();}
-			response.sendRedirect("product");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
+		if(product.getProductId().startsWith("y")){
+			try {
+				response.sendRedirect("GetStarted.jsp");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			try { 
+				if(session.getAttribute("cart")!=null){
+				Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
+				if(cart.isEmpty())session.invalidate();}
+				response.sendRedirect("product");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	}
