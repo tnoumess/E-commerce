@@ -15,14 +15,6 @@ int total=0;
 %>
 
 <input type="hidden" id="good" value="<% out.print("");%>">
-<div>my cart</div>
-<div>  <c:forEach items="${mycart}" var="outer"> 
-        <c:out value="${outer.value}"/>
-        </c:forEach>
- </div>
-
-
-
        
 <div style="height: 500px; margin: 20px;">
 	
