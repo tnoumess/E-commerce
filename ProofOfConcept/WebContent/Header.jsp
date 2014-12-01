@@ -87,17 +87,17 @@ var __adobewebfontsappname__ = "muse";
 							Object userName = request.getSession().getAttribute("user");
 							boolean showSignOut = false;
 							if(userName == null){
-								out.print("<div class='fld-grp clearfix grpelem' id='widgetu460' data-required='true'><!-- none box --><label class='fld-label actAsDiv clearfix grpelem' id='u464-4' for='widgetu460_input'><!-- content --><span class='actAsPara'>Your Account</span></label></div><input class='submit-btn NoWrap grpelem' id='u467-17' type='submit' value='' tabindex='3' formaction='Login.jsp'/>");
+								out.print("<div class='fld-grp clearfix grpelem' id='widgetu460' data-required='true'></div><a class=\"buttonRemoteEye NoWrap grpelem\" style=\"color:white;padding-left:5px;padding-right:5px;z-index: 61;min-height: 32px;width: 88px;margin-right: -10000px;text-align:center;line-height:32px;left: 252px;position:relative;\" href=\"Login.jsp\">Sign In</a>");
 							}
 							else {
-								out.print("<div class='fld-grp clearfix grpelem' id='widgetu460' data-required='true'><!-- none box --><a href=\"UserFeed.jsp\">" + userName.toString()+"</a></div>");
+								out.print("<div class='fld-grp clearfix grpelem' id='widgetu460' data-required='true'><!-- none box --><a class=\"buttonRemoteEye\"  style=\"color:white;padding:10px 15px;line-height:30px;\" href=\"UserFeed.jsp\">" + userName.toString()+"</a></div>");
 								showSignOut = true;
 							}
 						%>
 						
 						<%
 							if(showSignOut){
-								out.print("<input class='submit-btn NoWrap grpelem' id='u485-17' type='submit' value='' tabindex='6' formaction='logout'/>");
+								out.print("<a class=\"buttonRemoteEye NoWrap grpelem\" style=\"color:white;padding-left:5px;padding-right:5px;z-index: 61;min-height: 32px;width: 88px;margin-right: -10000px;text-align:center;line-height:32px;left: 252px;position:relative;\"' href='logout'/>Sign Out</a>");
 							}
 						%>
 

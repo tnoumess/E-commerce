@@ -10,15 +10,18 @@
     	  session.invalidate();
     	  
       } %>
-<div id="tagline">Buy A Camera to Get Started!</div>
+<div id="tagline">We also sell compatible web enabled cameras</div>
+	<div style="text-align:left;margin-left:60px;margin-bottom:20px;">
+		Easy to hook up, easy to use. Choose a camera that meets your needs.
+	</div>
  <c:out value="${request.getSession().getAttribute('cart')}"/>
 <div>
    <c:forEach items="${products}" var="prod" begin="0" end="2"  varStatus="loop">
-    	<div style="display:inline-block;width:250px;margin: 0px 15px 30px 15px;vertical-align:top;">
+    	<div style="display:inline-block;width:250px;margin: 0px 15px 30px 15px;vertical-align:top;background-color:#8aa3a3;border-radius:5px;padding:10px;min-height:500px;width:285px">
 
-    		<div><c:out value="${prod.name}"/></div>
+    		<div style="margin-top:5px;margin-bottom:10px;font-size:18px;font-weight:bold;color:white;"><c:out value="${prod.name}"/></div>
     		<img height="250"   src="<c:out value="${prod.imageUrl}"/>"/>
-    		<div style="text-align:right;">
+    		<div style="text-align:right;margin-top:10px;">
     			$<c:out value="${prod.price}"/>
     			<c:choose>
 	    			<c:when test="${empty cart || cart.containsKey(prod.productId) == false}">
@@ -35,7 +38,7 @@
 					</c:otherwise>
 				</c:choose>
     		</div>
-    		<div><c:out value="${prod.description}"/></div>
+    		<div style="text-align:left;margin-top:5px;padding-top:5px;border-top:1px solid black;padding-left:5px;"><c:out value="${prod.description}"/></div>
     	</div>
     </c:forEach>
     <br>

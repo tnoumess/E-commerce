@@ -7,7 +7,10 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ include file="Header.jsp" %> 
 <div id="subscriptionPlans">
-	<div id="tagline">RemoteEye's Subscription Plans</div>
+	<div id="tagline" style="margin-left:30px">RemoteEye's Subscription Plans</div>
+	<div style="text-align:left;margin-left:60px;margin-bottom:20px;">
+		Choose a subscription plan that is right for you. Once you have added a plan to your shopping cart, click the shopping cart icon in the top right hand corner to check out. A subscription is for an individual camera feed. Additional feeds will require additional subscriptions.
+	</div>
 	<div class="planContainer" id="planFree">
 		<div class="plan">
 			<div class="planTitle">Free Trial </div>
@@ -27,7 +30,7 @@
 			     <form action="addtocart" method="post" id="subTrial">
 		 			<div class="subscribeToCart" onclick="document.getElementById('subTrial').submit();">
 		     			<input type="hidden"name=productId value="<c:out value="y_free"/>">
-		     			Add To Cart!
+		     			Add To Cart
 		  			</div>	
 		  		</form>
 	  		</c:when>
@@ -35,7 +38,7 @@
 	  			<form action="removefromcart" method="post" id="subTrial">
 		 			<div class="removeFromCart " onclick="document.getElementById('subTrial').submit();">
 		     			<input type="hidden"name=productId value="<c:out value="y_free"/>">
-		     			Remove From Cart!
+		     			Remove From Cart
 		  			</div>	
 		  		</form>
 	  		</c:otherwise>
@@ -64,7 +67,7 @@
 			<form action="addtocart" method="post" id="cartViewNow">
 				<div class="subscribeToCart" id="subStoreNView" onclick="document.getElementById('cartViewNow').submit();">
 	     			<input type="hidden"name=productId value="<c:out value="y_medium"/>">
-	     			Add To Cart!
+	     			Add To Cart
 	        	</div>
 	        </form>
 	        </c:when>
@@ -72,7 +75,7 @@
 				<form action="removefromcart" method="post" id="cartViewNow">
 					<div class="removeFromCart" id="subStoreNView" onclick="document.getElementById('cartViewNow').submit();">
 		     			<input type="hidden"name=productId value="<c:out value="y_medium"/>">
-		     			Remove From Cart!
+		     			Remove From Cart
 		        	</div>
 	        	</form>
         	</c:otherwise>
@@ -102,7 +105,7 @@
 				<form action="addtocart" method="post" id="cartStoreView">
 					<div class="subscribeToCart" id="subStoreNView" onclick="document.getElementById('cartStoreView').submit();">
 		     			<input type="hidden"name=productId value="<c:out value="y_exelence"/>">
-		     			Add To Cart!
+		     			Add To Cart
 					</div>
 				</form>
 	        </c:when>
@@ -110,7 +113,7 @@
 				<form action="removefromcart" method="post" id="cartStoreView">
 					<div class="removeFromCart" id="subStoreNView" onclick="document.getElementById('cartStoreView').submit();">
 		     			<input type="hidden"name=productId value="<c:out value="y_exelence"/>">
-		     			Remove From Cart!
+		     			Remove From Cart
 		        	</div>
 	        	</form>
         	</c:otherwise>

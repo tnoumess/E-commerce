@@ -9,25 +9,24 @@
 
 <link href="CSS/mysheet.css" rel="stylesheet" type="text/css" />
 
-<div style="height: 250px;">
-
-
+<div style="width:450px; margin:0 auto;background-color:#8aa3a3;border-radius:5px;padding:20px;">
+	<img  src="images/padlock.png" style="height:32px;vertical-align:top;">
+	<div id="tagline" style="text-align:left;margin-bottom:10px;margin-left:0px;display:inline-block;vertical-align:top;height:32px;line-height:32px;padding-top:0px;">Create a Remote Eye account</div>
 	<form action="createaccount" method="POST">
-		<div style="margin:0 auto;max-width:300px">
-			<h2>Create An Account</h2>
+		<div style="margin:0 auto;width:340px">
 			<div class="formRow">
-				<div class="formLabel">Name:</div><input type="text" id="name" name="name"/>
+				<div class="formLabel" style="width:150px;text-align:right;padding-right:5px;">Name:</div><input type="text" id="name" name="name"/>
 			</div>
 			<div class="formRow">
-				<div class="formLabel">Password:</div><input type="password" id="password1" name="password1"/>
+				<div class="formLabel" style="width:150px;text-align:right;padding-right:5px;">Password:</div><input type="password" id="password1" name="password1"/>
 			</div>
 			<div class="formRow">
-				<div class="formLabel">Re-enter Password:</div><input type="password" id="password2" name="password2"/>
+				<div class="formLabel" style="width:150px;text-align:right;padding-right:5px;">Re-enter Password:</div><input type="password" id="password2" name="password2"/>
 			</div>
-			<div style="text-align:right;">
+			<div style="text-align:center;margin-top:10px;">
 				<input type="submit" value="Create Account"/>
 			</div>
-			<div id="error" class="error">
+			<div id="error" class="error" style="text-align:center;margin-top:20px;">
 				<%
 					String msg = request.getParameter("errorMsg");
 					if(msg != null)

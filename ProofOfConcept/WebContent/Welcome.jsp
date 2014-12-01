@@ -17,7 +17,10 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
-<div id="tagline">The Only Integrated Home Monitoring system where You Choose Your Own Camera</div>
+	<div id="tagline" style="text-align:left;margin-bottom:10px;margin-left:60px;">What is Remote Eye?</div>
+	<div style="font-size: 16px;margin-bottom:10px;margin-left:90px;text-align:left;">
+		Remote Eye is a home monitoring system. With Remote Eye, you can monitor your children, pets and valuables while you're not at home.
+	</div>
 	<div class="clearfix colelem" id="pppu391"><!-- group -->
 	<div class="clearfix grpelem" id="ppu391"><!-- column -->     
       <div class="clearfix colelem" id="pu391"><!-- group -->      
@@ -83,7 +86,10 @@
 
 </div>
     </div>
-    
+<div id="tagline">
+	The only integrated home monitoring system where you can choose your own camera! 
+	<a class="buttonRemoteEye" style="color:white;padding-left:5px;padding-right:5px;font-size:18px;height:32px;line-height:32px;display:inline-block;" href="GetStarted.jsp">Get Started Today!</a>
+</div>    
      <!--HTML Widget code-->
   
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

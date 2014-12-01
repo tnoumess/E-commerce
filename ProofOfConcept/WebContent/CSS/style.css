@@ -103,15 +103,18 @@ body {
 
 .error {
 	font-weight: bold;
-	color: red;
+	color: #e30000;
 }
 
 #tagline{
-	margin-top:-10px;
+	padding-top: 10px;
 	margin-bottom:30px;
 	font-weight:bold;
 	color: #0071BC;
 	font-size:20px;
+	clear: both;
+	text-align:left;
+	margin-left:50px;
 }
 
 
@@ -285,18 +288,17 @@ a div.userMenu {
 /*Download Page*/
 #download{
 	margin:auto;
+	text-align:left;
 }
 #downloadInstr{
-	float:left;
 	margin-left: 100px;
 	margin-top:5px;
-	
 	text-align: left;
+	display:inline-block;
 }
 #downloadButton{
-	float:left;
-	margin-left: 25px;
-	
+	margin: 20px auto;
+	text-align:center;
 	width: 200px;
 	padding: 20px 0px;*/
 	text-align: center;
@@ -332,9 +334,13 @@ a div.userMenu {
 }
 
 #downloadStart{
-	position: relative;
-	left: -215px;
-	top: 20px;
+	padding: 20px 0px;
+	margin: 20px auto;
+	text-align:center;
+	width: 200px;
+/* 	position: relative; */
+/* 	left: -215px; */
+/* 	top: 20px; */
 }
 
 
@@ -354,7 +360,7 @@ a div.userMenu {
 	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
 	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
 	background: -o-linear-gradient(top, #3e779d, #65a9d7);
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .buttonRemoteEye:hover{
