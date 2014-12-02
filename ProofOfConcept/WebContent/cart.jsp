@@ -26,54 +26,80 @@ int total=0;
     <div class="Heading">
         
         <div class="Cell">
-            <p style="background-color:#9999CC">Brand</p>
+            <p style="background-color:#9999CC">Product</p>
         </div>
         <div class="Cell">
-            <p style="background-color:#9999CC">Price</p>
+            <p style="background-color:#9999CC">Unit Price</p>
         </div>
         <div class="Cell">
             <p style="background-color:#9999CC">Quantity</p>
         </div>
+        <div class="Cell">
+            <p style="background-color:#9999CC">Unit Total</p>
+        </div>
         
     </div>
     
-    <c:forEach items="${mycart}" var="outer"> 
+    <c:forEach items="${mycartId}" var="outer"> 
+<% 
+//ArrayList al = new ArrayList();
+%>
+    
 	    <div class="Row">
 	        <div class="Cell">
 	            <p><c:out value="${outer.key}"/></p>
 	        </div>  
-	    
-	     
+	        <c:forEach items="${outer.value}" var="outerId" begin="0" end="0"> 
 	        <div class="Cell">
-	            <p style=" text-align:right"><c:out value="${outer.value}"/></p>
+	            <p style=" text-align:right"><c:out value="${outerId}"/></p>
 	        </div>  
+	        </c:forEach> 
 	        
 	        <div class="Cell"> 
-	        	<input class="quantity" type="text" value="1" onClick="this.setSelectionRange(0, this.value.length)"/>
+	            <c:forEach items="${outer.value}" var="outerId" begin="2" end="2"> 
+	           	${outerId}
+	            </c:forEach>
+	                      	      
 	        </div>
-	        <div class="buttonRemoteEyeRed productRemove">Remove</div>
-	        <% 
-	   // total=total+ ${outer.value};
-	     %>
+	       
+	        <div class="Cell"> 
+	            <c:forEach items="${outer.value}" var="outerId" begin="3" end="3"> 
+	           	${outerId}
+	            </c:forEach>
+	                     	      
+	        </div>  
+	        <form action="removefromcart" method="post" > 
+	        <c:forEach items="${outer.value}" var="outerId" begin="1" end="1"> 
+	            <input  class="quantity" type="hidden" name="productId" value="${outerId}" size="15" readonly />
+	            </c:forEach>	
+	         <input class="buttonRemoteEyeRed productRemove" type="submit" value="Remove 1 unit">
+	        </form>
 	    </div>
-     </c:forEach>
-     
+	 
+    </c:forEach> 
+    
     <div class="Row">
     
         <div class="Cell">
             <p style="background-color:#C0C0C0">TOTAL</p>
         </div>
-       
-         
         <div class="Cell">
+            <p style="background-color:#C0C0C0"></p>
+        </div>
+         <div class="Cell">
+            <p style="background-color:#C0C0C0"></p>
+        </div>
+         
+        <div class="Cell"> 
+                 
             <p style="background-color:#C0C0C0"><strong>$<c:out value="${total}"/> </strong></p>
+             
+            
         </div>     
-       
-          <div class="Cell">
-            <p style="background-color:#C0C0C0"><strong>12345 </strong></p>
-        </div> 
-    
+                 
     </div>
+   
+    
     
 </div>	<form action="checkout" method="post" id="checkoutForm">
      			<input type="hidden"name=productId value="<c:out value="y_free"/>">
@@ -107,3 +133,4 @@ int total=0;
 	 
 	 </script>
      <%@ include file="Footer.jsp" %>  
+	        

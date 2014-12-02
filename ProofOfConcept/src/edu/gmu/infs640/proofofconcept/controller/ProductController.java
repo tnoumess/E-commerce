@@ -2,9 +2,12 @@ package edu.gmu.infs640.proofofconcept.controller;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -28,7 +31,7 @@ public class ProductController{
 	private final ProductDao dao;
 	private final OrderDescriptionDao Od;
 	private final OrderDao O;
-	
+	static BigDecimal totalID=new BigDecimal(0);
 	public ProductController(ProductDao dao, OrderDescriptionDao Od,OrderDao O){
 		this.dao = dao;
 		this.Od=Od;
@@ -41,34 +44,69 @@ public class ProductController{
 		
 		//
 		Hashtable<String,BigDecimal> mycart=new Hashtable<String, BigDecimal>();
+		Hashtable<String, List<Object>> mycartId=new Hashtable<String, List<Object>>();
 		
 		HttpSession session=request.getSession();
 		session.setAttribute("mycart", new Hashtable<String,BigDecimal>());
+		session.setAttribute("mycartId", new Hashtable<String, List<Object>>());
 		//session.setAttribute("cart", new Hashtable<String, Integer>());
 		BigDecimal sum= new BigDecimal(0);
+		BigDecimal total_price=new BigDecimal(0);
 		@SuppressWarnings("unchecked")
 		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
 		Set<?> values=cart.keySet();
 		Iterator<?> iter=values.iterator();
+		if(session.getAttribute("cart")!=null){
 		while(iter.hasNext()){
 			//System.out.println("val"+iter.next());
+			
 			String id=(String) iter.next();
 			dao.getProductById(id).getName();
 			sum=sum.add(dao.getProductById(id).getPrice());
 			System.out.println(sum);
 			mycart.put(dao.getProductById(id).getName(), dao.getProductById(id).getPrice());
+			MathContext mc = new MathContext(4);
+			List<Object> l=new ArrayList<Object>();
+			l.add(dao.getProductById(id).getPrice());
+			l.add(id);
+			l.add(cart.get(id));
+			
+			BigDecimal total=new BigDecimal(0);
+			BigDecimal unit_price=new BigDecimal(cart.get(id));
+			total=unit_price.multiply(dao.getProductById(id).getPrice());
+			l.add(total);			
+			totalID=totalID.add(total);
+			
+			System.out.println(total_price.toString());
+			//l.add(total_price);
+			mycartId.put(dao.getProductById(id).getName(),l);
+			
 		
 		}
+		//mycart.put("totalprice",totalID);
+		//List<Object> l=new ArrayList<Object>();
 		
-		
+		//mycartId.put(dao.getProductById(id).getName(),l);
+				
 		try {
-			session.setAttribute("total",sum);
+			session.setAttribute("total",totalID);
 			
-			session.setAttribute("mycart", mycart);
+			//session.setAttribute("mycart", mycart);
+			session.setAttribute("mycartId", mycartId);
+			totalID= new BigDecimal(0);
 			response.sendRedirect("cart.jsp");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}}else 
+		{
+			
+			try {
+				response.sendRedirect("Products.jsp");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	}

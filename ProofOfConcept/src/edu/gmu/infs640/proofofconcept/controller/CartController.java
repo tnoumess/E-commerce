@@ -31,11 +31,13 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 		if(!cart.containsKey(product.getProductId()))
 		{
 			cart.put(product.getProductId(),1);
+		}else{
+			
+			cart.put(product.getProductId(),cart.get(product.getProductId()) +1);
 		}
-		
+		System.out.println(cart);
 			//cart.put(item.getItemId(), cart.get(item.getItemId()) +item.getQuantity());
-		//logger.info("just added" +item.getQuantity()+ " camera");
-		
+		//logger.info("just added" +item.getQuantity()+ " camera");		
 		
 		if(product.getProductId().startsWith("y")){
 			try {
@@ -63,24 +65,39 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 			
 		@SuppressWarnings("unchecked")
 		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
-			if(cart.containsKey(request.getParameter("productId")))
-				cart.remove(request.getParameter("productId"));
-			
+			if(cart.containsKey(request.getParameter("productId"))){
+				String id=request.getParameter("productId");System.out.println("number of"+product.getProductId()+":"+cart.get(product.getProductId()));
+				if(cart.get(product.getProductId())==1){System.out.println("In remove last");
+				cart.remove(product.getProductId());}else{
+				cart.put(product.getProductId(),cart.get(id) -1);}
+			}System.out.println(cart);
 				}
 		
+		
 		if(product.getProductId().startsWith("y")){
-			try {
+			try { 
+				if(session.getAttribute("cart")==null){
+				Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
+				if(cart.isEmpty())session.invalidate();
+				
 				response.sendRedirect("GetStarted.jsp");
+				
+				}else				
+					
+				response.sendRedirect("http://localhost:8080/ProofOfConcept/cart.jsp");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}else{
 			try { 
-				if(session.getAttribute("cart")!=null){
+				if(session.getAttribute("cart")==null){
 				Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
-				if(cart.isEmpty())session.invalidate();}
-				response.sendRedirect("product");
+				if(cart.isEmpty())session.invalidate();
+				
+				response.sendRedirect("GetStarted.jsp");
+				}else
+				response.sendRedirect("http://localhost:8080/ProofOfConcept/cart.jsp");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

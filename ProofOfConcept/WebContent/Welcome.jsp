@@ -17,7 +17,16 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
-	<div id="tagline" style="text-align:left;margin-bottom:10px;margin-left:60px;">What is Remote Eye?</div>
+	<div id="tagline" style="text-align:left;margin-bottom:10px;margin-left:60px;">What is Remote Eye?
+	<% 
+   Object sms=request.getSession().getAttribute("sms");
+  
+      if(sms!=null&&sms.equals("sms")){
+    	out.print("<span style='color:green'>Thank you for Shopping. Your order has been placed</span>");  
+    	  session.invalidate();
+      }
+              
+      %></div>
 	<div style="font-size: 16px;margin-bottom:10px;margin-left:90px;text-align:left;">
 		Remote Eye is a home monitoring system. With Remote Eye, you can monitor your children, pets and valuables while you're not at home.
 	</div>
@@ -61,17 +70,7 @@
       </div>
      </div>
      <div class="rounded-corners clip_frame grpelem" id="u389"><!-- image -->
-     <% 
-   Object sms=request.getSession().getAttribute("sms");
-  
-      if(sms!=null&&sms.equals("sms")){
-    	out.print("<span style='color:green'>Thank you for Shopping. Your order has been placed</span>");  
-    	  session.invalidate();
-      }
-        
-      
-      
-      %>
+     
       <img class="block" id="u389_img" src="images/happy%20family-2.jpg" alt="" width="680" height="434"/>
      </div>
     </div>
