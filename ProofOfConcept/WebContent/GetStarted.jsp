@@ -25,24 +25,12 @@
 
 		     </div>
 	     </div>
-	     <c:choose>
-   			<c:when test="${empty cart || cart.containsKey('y_free') == false}">
-			     <form action="addtocart" method="post" id="subTrial">
-		 			<div class="subscribeToCart" onclick="document.getElementById('subTrial').submit();">
-		     			<input type="hidden"name=productId value="<c:out value="y_free"/>">
-		     			Add To Cart
-		  			</div>	
-		  		</form>
-	  		</c:when>
-	  		<c:otherwise>
-	  			<form action="removefromcart" method="post" id="subTrial">
-		 			<div class="removeFromCart " onclick="document.getElementById('subTrial').submit();">
-		     			<input type="hidden"name=productId value="<c:out value="y_free"/>">
-		     			Remove From Cart
-		  			</div>	
-		  		</form>
-	  		</c:otherwise>
-  		</c:choose>
+	     <form action="addtocart" method="post" id="subTrial">
+ 			<div class="subscribeToCart" onclick="document.getElementById('subTrial').submit();">
+     			<input type="hidden"name=productId value="<c:out value="y_free"/>">
+     			Add To Cart
+  			</div>	
+  		</form>
 
      </div>
      <div class="planContainer"  id="planView">
@@ -62,24 +50,12 @@
 				</ul>
 			</div>
 		</div>
-		<c:choose>
-   			<c:when test="${empty cart || cart.containsKey('y_medium') == false}">
-			<form action="addtocart" method="post" id="cartViewNow">
-				<div class="subscribeToCart" id="subStoreNView" onclick="document.getElementById('cartViewNow').submit();">
-	     			<input type="hidden"name=productId value="<c:out value="y_medium"/>">
-	     			Add To Cart
-	        	</div>
-	        </form>
-	        </c:when>
-	  		<c:otherwise>
-				<form action="removefromcart" method="post" id="cartViewNow">
-					<div class="removeFromCart" id="subStoreNView" onclick="document.getElementById('cartViewNow').submit();">
-		     			<input type="hidden"name=productId value="<c:out value="y_medium"/>">
-		     			Remove From Cart
-		        	</div>
-	        	</form>
-        	</c:otherwise>
-       	</c:choose>
+		<form action="addtocart" method="post" id="cartViewNow">
+			<div class="subscribeToCart" id="subStoreNView" onclick="document.getElementById('cartViewNow').submit();">
+     			<input type="hidden"name=productId value="<c:out value="y_medium"/>">
+     			Add To Cart
+        	</div>
+        </form>
 	</div>
 	<div class="planContainer" id="planStore">
 		<div class="plan">
@@ -100,24 +76,12 @@
 				
 			</div>
 		</div>
-		<c:choose>
-   			<c:when test="${empty cart || cart.containsKey('y_exelence') == false}">
-				<form action="addtocart" method="post" id="cartStoreView">
-					<div class="subscribeToCart" id="subStoreNView" onclick="document.getElementById('cartStoreView').submit();">
-		     			<input type="hidden"name=productId value="<c:out value="y_exelence"/>">
-		     			Add To Cart
-					</div>
-				</form>
-	        </c:when>
-	  		<c:otherwise>
-				<form action="removefromcart" method="post" id="cartStoreView">
-					<div class="removeFromCart" id="subStoreNView" onclick="document.getElementById('cartStoreView').submit();">
-		     			<input type="hidden"name=productId value="<c:out value="y_exelence"/>">
-		     			Remove From Cart
-		        	</div>
-	        	</form>
-        	</c:otherwise>
-       	</c:choose>
+		<form action="addtocart" method="post" id="cartStoreView">
+			<div class="subscribeToCart" id="subStoreNView" onclick="document.getElementById('cartStoreView').submit();">
+	    			<input type="hidden"name=productId value="<c:out value="y_exelence"/>">
+	    			Add To Cart
+			</div>
+		</form>
 	</div>
 	<div style="clear:both;"></div>
 </div>

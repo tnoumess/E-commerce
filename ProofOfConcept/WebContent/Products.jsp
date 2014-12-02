@@ -23,20 +23,10 @@
     		<img height="250"   src="<c:out value="${prod.imageUrl}"/>"/>
     		<div style="text-align:right;margin-top:10px;">
     			$<c:out value="${prod.price}"/>
-    			<c:choose>
-	    			<c:when test="${empty cart || cart.containsKey(prod.productId) == false}">
-		    			<form action="addtocart" method="post" id="addProduct${loop.index}"  style="display:inline-block;">	
-		     				<input type="hidden" name="productId" value="${prod.productId}">
-		     				<div class="buttonRemoteEye productAdd" onclick="document.getElementById('addProduct${loop.index}').submit();">Add to Cart </div>
-		     			</form>	
-	     			</c:when>
-	     			<c:otherwise>
-		     			<form action="removefromcart" method="post" id="removeProduct${loop.index}" style="display:inline-block;">
-			     			<input type="hidden"name=productId value="<c:out value="${prod.productId}"/>">
-			     			<div class="buttonRemoteEyeRed productRemove" onclick="document.getElementById('removeProduct${loop.index}').submit();">Remove from Cart</div>
-		     			</form>
-					</c:otherwise>
-				</c:choose>
+    			<form action="addtocart" method="post" id="addProduct${loop.index}"  style="display:inline-block;">	
+     				<input type="hidden" name="productId" value="${prod.productId}">
+     				<div class="buttonRemoteEye productAdd" onclick="document.getElementById('addProduct${loop.index}').submit();">Add to Cart </div>
+     			</form>	
     		</div>
     		<div style="text-align:left;margin-top:5px;padding-top:5px;border-top:1px solid black;padding-left:5px;"><c:out value="${prod.description}"/></div>
     	</div>
