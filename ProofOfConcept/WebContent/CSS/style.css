@@ -400,15 +400,31 @@ a div.userMenu {
 
 .productRemove{
 	border-radius: 5px;
-	padding: 5px;
+	padding: 3px;
 	text-align: center;
-	margin: 5px;
+	margin-left: 5px;
+	/* width: 150px; */
+	font-size: 12px;
+}
+
+
+/*Shopping cart*/
+.quantity{
+	text-align:right;
+	margin: 2px 5px;
+	width: 55px;
 }
 
 .cartCheckout{
+	font-size: 20px;
+	
 	border-radius: 5px;
-	padding: 5px;
+	padding: 6px;
 	text-align: center;
 	width: 100px;
 	margin:auto;
+}
+
+.Row:hover .buttonRemoteEyeRed{
+	display: block;
 }
