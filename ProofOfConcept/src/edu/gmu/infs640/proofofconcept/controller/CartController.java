@@ -108,7 +108,7 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 
 				
 
-				response.sendRedirect("http://localhost:8080/ProofOfConcept/listcart");
+				response.sendRedirect("listcart");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -124,7 +124,7 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 
 			
 
-				response.sendRedirect("http://localhost:8080/ProofOfConcept/listcart");
+				response.sendRedirect("listcart");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

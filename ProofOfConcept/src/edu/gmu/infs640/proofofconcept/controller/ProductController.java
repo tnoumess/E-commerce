@@ -54,9 +54,10 @@ public class ProductController{
 		BigDecimal total_price=new BigDecimal(0);
 		@SuppressWarnings("unchecked")
 		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
+		System.out.println(cart);
 		Set<?> values=cart.keySet();
 		Iterator<?> iter=values.iterator();
-		if(session.getAttribute("cart")!=null){
+		if(!cart.isEmpty()){
 		while(iter.hasNext()){
 			//System.out.println("val"+iter.next());
 			
@@ -102,7 +103,7 @@ public class ProductController{
 		{
 			
 			try {
-				response.sendRedirect("Products.jsp");
+				response.sendRedirect("product");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
