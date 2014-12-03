@@ -12,10 +12,10 @@
 	<form action="login" method="post">
 			<div style="margin:0 auto;width:340px;text-align:left;">
 			<div class="formRow">
-				<div class="formLabel" style="text-align:right;padding-right:5px;">Name:</div><input type="text" id="name" name="name"/>
+				<div class="formLabel" style="text-align:right;padding-right:5px;">Name:</div><input type="email" id="name" name="name" required/>
 			</div>
 			<div class="formRow">
-				<div class="formLabel" style="text-align:right;padding-right:5px;">Password:</div><input type="password" id="password" name="password"/>
+				<div class="formLabel" style="text-align:right;padding-right:5px;">Password:</div><input type="password" id="password" name="password" requiredz/>
 			</div>
 			<div style="text-align:center;margin-top:10px;">
 				<input type="submit" value="Sign In"/>

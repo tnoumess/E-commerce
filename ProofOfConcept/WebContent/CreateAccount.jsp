@@ -15,13 +15,13 @@
 	<form action="createaccount" method="POST">
 		<div style="margin:0 auto;width:340px">
 			<div class="formRow">
-				<div class="formLabel" style="width:150px;text-align:right;padding-right:5px;">Name:</div><input type="text" id="name" name="name"/>
+				<div class="formLabel" style="width:150px;text-align:right;padding-right:5px;">Username:</div><input type="email" id="name" name="name" required/>
 			</div>
 			<div class="formRow">
-				<div class="formLabel" style="width:150px;text-align:right;padding-right:5px;">Password:</div><input type="password" id="password1" name="password1"/>
+				<div class="formLabel" style="width:150px;text-align:right;padding-right:5px;">Password:</div><input type="password" id="password1" name="password1" required/>
 			</div>
 			<div class="formRow">
-				<div class="formLabel" style="width:150px;text-align:right;padding-right:5px;">Re-enter Password:</div><input type="password" id="password2" name="password2"/>
+				<div class="formLabel" style="width:150px;text-align:right;padding-right:5px;">Re-enter Password:</div><input type="password" id="password2" name="password2" required/>
 			</div>
 			<div style="text-align:center;margin-top:10px;">
 				<input type="submit" value="Create Account"/>
