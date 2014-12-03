@@ -109,8 +109,8 @@ var __adobewebfontsappname__ = "muse";
      	<!-- Shopping Cart -->
         <a href="listcart" id="link">
         	<img class="block" id="u509_img" src="images/cartimg.png" alt="shopping cart img" width="47" height="47"/>
-	        <c:if test="${not empty cart}">
-		      <span id="itemsInCart"><c:out value="${fn:length(cart)}"/></span>
+	        <c:if test="${not empty cartTotal}">
+		      <span id="itemsInCart"><c:out value="${cartTotal}"/></span>
 			</c:if>
 		</a>
        </div>

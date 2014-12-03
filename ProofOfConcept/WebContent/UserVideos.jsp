@@ -22,17 +22,30 @@
 		  <source id="video" type="video/mp4">
 		Your browser does not support the our video player.
 		</video>
-	
+		
+		<div id="shareContent">
+			<div id="shareVideo">Share <span id="shareDirection">&#x25C0;</span></div>
+			<div id="shareLinks">
+				<div class="shareOption"><img src="images/youtube.png"/></div>
+				<div class="shareOption"><img src="images/facebook.png"/></div>
+				<div class="shareOption"><img src="images/instagram.jpg"/></div>
+			</div>
+		</div>
 	</div>
 </div>
 
 <script>
 	var video = document.getElementById("previewVideo");
-	
+	var sharedOpen = false;
 	$("#videoplayer").dialog({
 		autoOpen: false,
 		width: 750,
-		modal: true
+		modal: true,
+		close: function(event, ui){
+			$("#shareLinks").hide();
+			sharedOpen= false;
+			$("#shareDirection").html("&#x25C0;");
+		}
 	});
 	
 	function playvideo(file, title){
@@ -49,5 +62,23 @@
 	video.addEventListener('click',function(){
 		this.paused ? this.play() : this.pause();
 	},false);
+	
+	$("#shareLinks").hide();
+	$(".shareOption").click(function(){
+		alert("Not Available in Demo");
+	});
+	$("#shareVideo").click(function(){
+		if(sharedOpen){
+			$("#shareLinks").hide();
+			sharedOpen= false;
+			$("#shareDirection").html("&#x25C0;");
+		}else{
+			$("#shareLinks").show("slide", {direction: "right"}, 1000);
+			sharedOpen= true;
+			$("#shareDirection").html("&#x25B6;");
+		}
+		
+	});
+	
 </script>
 <%@ include file="Footer.jsp" %> 
