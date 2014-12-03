@@ -106,7 +106,7 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 				}else				
 					
 
-				response.sendRedirect("http://localhost:8080/ProofOfConcept/listcart");
+				
 
 				response.sendRedirect("http://localhost:8080/ProofOfConcept/listcart");
 			} catch (IOException e) {
@@ -122,7 +122,7 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 				response.sendRedirect("GetStarted.jsp");
 				}else
 
-				response.sendRedirect("http://localhost:8080/ProofOfConcept/listcart");
+			
 
 				response.sendRedirect("http://localhost:8080/ProofOfConcept/listcart");
 			} catch (IOException e) {
