@@ -3,9 +3,12 @@ package edu.gmu.infs640.proofofconcept.controller;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Map;
+import java.util.Set;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -35,6 +38,15 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 			
 			cart.put(product.getProductId(),cart.get(product.getProductId()) +1);
 		}
+		
+		//total amount in cart
+		Set<String> keys = cart.keySet();
+		Integer totalItemsCart = 0;
+		for(String key: keys){
+			totalItemsCart += cart.get(key);
+		}
+		session.setAttribute("cartTotal", totalItemsCart);
+		
 		System.out.println(cart);
 			//cart.put(item.getItemId(), cart.get(item.getItemId()) +item.getQuantity());
 		//logger.info("just added" +item.getQuantity()+ " camera");		
@@ -71,7 +83,16 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 				cart.remove(product.getProductId());}else{
 				cart.put(product.getProductId(),cart.get(id) -1);}
 			}System.out.println(cart);
-				}
+			
+			//total amount in cart
+			Set<String> keys = cart.keySet();
+			Integer totalItemsCart = 0;
+			for(String key: keys){
+				totalItemsCart += cart.get(key);
+			}
+			session.setAttribute("cartTotal", totalItemsCart);
+		}
+		
 		
 		
 		if(product.getProductId().startsWith("y")){
@@ -84,7 +105,7 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 				
 				}else				
 					
-				response.sendRedirect("http://localhost:8080/ProofOfConcept/cart.jsp");
+				response.sendRedirect("http://localhost:8080/ProofOfConcept/listcart");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -97,7 +118,7 @@ static private final Logger logger = LoggerFactory.getLogger(LoginController.cla
 				
 				response.sendRedirect("GetStarted.jsp");
 				}else
-				response.sendRedirect("http://localhost:8080/ProofOfConcept/cart.jsp");
+				response.sendRedirect("http://localhost:8080/ProofOfConcept/listcart");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
