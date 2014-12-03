@@ -210,9 +210,22 @@ a div.userMenu {
 	width: 75%;
 	cursor: pointer;
 }
+#shareLinks{
+	float: left;
+}
+.shareOption{
+	float: left;
+	padding: 8px;
+	
+	cursor: pointer;
+	
+}
+.shareOption img{
+	height: 25px;
+}
 #shareVideo{
 	clear:both;
-	float: right;
+	float: left;
 	margin: 5px;
 
 	/*circular border*/
@@ -227,6 +240,12 @@ a div.userMenu {
 #shareVideo:hover{
 	background-color: #ADAD99;
 }
+
+#shareContent{
+	float: right;
+}
+
+
 
 #videoFeedPanel{
 	clear:both;	
