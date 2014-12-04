@@ -9,6 +9,7 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import javax.servlet.ServletException;
@@ -59,7 +60,7 @@ public class ProductController{
 		Iterator<?> iter=values.iterator();
 		if(!cart.isEmpty()){
 		while(iter.hasNext()){
-			//System.out.println("val"+iter.next());
+		
 			
 			String id=(String) iter.next();
 			dao.getProductById(id).getName();
@@ -84,15 +85,11 @@ public class ProductController{
 			
 		
 		}
-		//mycart.put("totalprice",totalID);
-		//List<Object> l=new ArrayList<Object>();
 		
-		//mycartId.put(dao.getProductById(id).getName(),l);
 				
 		try {
 			session.setAttribute("total",totalID);
 			
-			//session.setAttribute("mycart", mycart);
 			session.setAttribute("mycartId", mycartId);
 			totalID= new BigDecimal(0);
 			response.sendRedirect("cart.jsp");
@@ -152,31 +149,31 @@ public class ProductController{
 	@RequestMapping(value="/checkpayment", method = RequestMethod.GET )
 	public void checkpayment(final HttpServletRequest request,
 			final HttpServletResponse response){
-		BigDecimal sum= new BigDecimal(0);
 		HttpSession session=request.getSession();
 		int orderId=(request.getParameter("name")+new Date()).hashCode();
-		if(session.getAttribute("cart")!=null){
+		if(session.getAttribute("mycartId")!=null){
 		@SuppressWarnings("unchecked")
-		Map<String,Integer>  cart=(Map<String,Integer>)session.getAttribute("cart");
+		Map<String,List<Object>>  cart=(Map<String,List<Object>>)session.getAttribute("mycartId");
 		
-		
-		Set<?> values=cart.keySet();
-		Iterator<?> iter=values.iterator();
-		while(iter.hasNext()){
-			
-			String id=(String) iter.next();
-			dao.getProductById(id).getName();
-			sum=sum.add(dao.getProductById(id).getPrice());
-			//double price=dao.getProductById(id).getPrice();
-		                        Od.createNewdescription(orderId,id, 1, dao.getProductById(id).getPrice().doubleValue());
-		}
-			//cart.put(dao.getProductById(id).getName(), dao.getProductById(id).getPrice());
+		for (Map.Entry<String, List<Object>> entry : cart.entrySet()) {
+            String key = entry.getKey();
+            List<Object> values = entry.getValue();
+            System.out.println("Key = " + key);
+            System.out.println("Values = " + values + "n");
+            System.out.println("-------------"+ values.getClass()+"------------");
+            
+            System.out.println("----"+values.get(0)+"--"+values.get(1)+"-------"+values.get(2)+"---"+values.get(3)+"---------");
+            
+            Od.createNewdescription(orderId,values.get(1).toString(), Integer.parseInt(values.get(2).toString()),  Double.parseDouble(values.get(3).toString()));
+            
+        }
+	
 		
 		if(session.getAttribute("user")!=null){
-			  O.createNewOrder(orderId,session.getAttribute("user").toString(), sum.doubleValue());
+			  O.createNewOrder(orderId,session.getAttribute("user").toString(), Double.parseDouble(session.getAttribute("total").toString()));
 			 
 		}else{
-			  O.createNewOrder(orderId, request.getParameter("name"), sum.doubleValue());
+			  O.createNewOrder(orderId, request.getParameter("name"), Double.parseDouble(session.getAttribute("total").toString()));
 			
 		}session.invalidate();
 	
