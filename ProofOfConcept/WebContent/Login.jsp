@@ -15,7 +15,7 @@
 				<div class="formLabel" style="text-align:right;padding-right:5px;">Username:</div><input type="email" id="name" name="name" required/>
 			</div>
 			<div class="formRow">
-				<div class="formLabel" style="text-align:right;padding-right:5px;">Password:</div><input type="password" id="password" name="password" requiredz/>
+				<div class="formLabel" style="text-align:right;padding-right:5px;">Password:</div><input type="password" id="password" name="password" required/>
 			</div>
 			<div style="text-align:center;margin-top:10px;">
 				<input type="submit" value="Sign In"/>
