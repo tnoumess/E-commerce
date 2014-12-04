@@ -11,7 +11,7 @@
 
 <div style="width:450px; margin:0 auto;background-color:#8aa3a3;border-radius:5px;padding:20px;">
 	<img  src="images/padlock.png" style="height:32px;vertical-align:top;">
-	<div id="tagline" style="text-align:left;margin-bottom:10px;margin-left:0px;display:inline-block;vertical-align:top;height:32px;line-height:32px;padding-top:0px;">Create a Remote Eye account</div>
+	<div id="tagline" style="text-align:left;margin-bottom:10px;margin-left:0px;display:inline-block;vertical-align:top;height:32px;line-height:32px;padding-top:0px;">Create a RemoteEye® account</div>
 	<form action="createaccount" method="POST">
 		<div style="margin:0 auto;width:340px">
 			<div class="formRow">
